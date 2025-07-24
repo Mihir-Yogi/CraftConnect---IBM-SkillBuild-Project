@@ -175,3 +175,40 @@ body {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/* responsive layout */
+@media(max-width:765px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 16px;
+        z-index: 60;
+    }
+
+    .navbar-container {
+        padding: 0 8px;
+    }
+}
+
+
+@media(max-width:640px) and (min-width:768px) {
+    .navbar-container {
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar-container {
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar-container {
+        padding: 0 64px;
+    }
+}
