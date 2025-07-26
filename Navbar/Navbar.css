@@ -127,12 +127,58 @@ body {
 .inline-wrapper {
     display: flex;
     align-items: center;
-    /* Vertically center the items */
     gap: 10px;
-    /* Optional: adds space between elements */
     margin-right: 5%;
     margin-top: 4%;
 }
+
+.image-stack {
+    background-color: #b9a189;
+    padding: 2%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-stack figure {
+    text-align: center;
+}
+
+.image-stack img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 3px black;
+}
+
+.image-stack .p1 {
+    width: 150px;
+    height: 150px;
+}
+
+.image-stack .p3 {
+    width: 250px;
+    height: 250px;
+}
+
+.image-stack figcaption {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #5C4A38;
+}
+
+@media (max-width: 768px) {
+  .image-stack {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 .products {
     /* display: flex; */
@@ -223,14 +269,6 @@ hr {
 }
 
 @media (max-width:640px) and (min-width:768px) {
-
-    /* .content-wrapper h1 {
-        font-size: 2rem;
-    }
-
-    .content-wrapper p {
-        font-size: 1rem;
-    } */
 
     .main-content {
         display: flex;
