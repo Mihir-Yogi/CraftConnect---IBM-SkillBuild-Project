@@ -466,9 +466,6 @@ body {
   background-color: #555;
 }
 
-
-
-.container{
 .container {
     padding: 5%;
 }
@@ -620,5 +617,4 @@ body {
     .navbar-container {
         padding: 0 64px;
     }
-}
 }
