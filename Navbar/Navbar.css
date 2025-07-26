@@ -173,10 +173,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  .image-stack {
-    flex-direction: column;
-    align-items: center;
-  }
+    .image-stack {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
@@ -202,43 +202,53 @@ body {
 }
 
 /* Navigation buttons */
-.prev-btn, .next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: black;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  z-index: 1;
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1;
 }
 
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
+.prev-btn {
+    left: 10px;
+}
 
-.prev-btn:hover, .next-btn:hover {
-  background-color: #745C44;
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #745C44;
 }
 
 .carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 2% 5%;
-  box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2% 5%;
+    box-sizing: border-box;
 }
 
 .card-container {
-  display: flex;
-  gap: 20px;
-  scroll-behavior: smooth;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+    display: flex;
+    gap: 20px;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
 }
+
 .card-container::-webkit-scrollbar {
-  display: none; /* Chrome */
+    display: none;
+    /* Chrome */
 }
 
 
@@ -306,6 +316,49 @@ body {
         justify-content: center;
         text-align: left;
     }
+}
+
+.container{
+    padding: 5%;
+}
+
+/* Specific styles for the image layout section (from previous immersive, updated with user's images) */
+.left-section-bg {
+    /* background-image: url(/Imgs/Product-04.jpeg); */
+    /* Placeholder for Product-04.jpeg */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* overflow: hidden; */
+    /* width: 50%;
+    height: 100%; */
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shop-button {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: #8B5E3C;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: medium;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #6C482B;
 }
 
 /* .mobile-menu-toggle */
