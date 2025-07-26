@@ -387,13 +387,308 @@ body {
     /* margin-top: 2rem; */
 }
 
-.footer-bottom p {
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    box-sizing: border-box;
+}
 
+.row {
+    margin: 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.column img {
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.column img:nth-child(2) {
+    margin-top: 2%;
+    height: 40%;
+}
+
+.column:first-child .img-container img {
+    margin-top: 0;
+}
+
+.img-container {
+    position: relative;
+    text-align: left;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: auto;
+    box-sizing: border-box;
+    transform: translate(0, 0);
+}
+
+.overlay-text h1 {
+    margin-bottom: 2%;
+    font-size: 100px;
+}
+
+.img-btn {
+    margin-top: 3%;
+    background-color: #6b4423;
+    color: white;
+    padding: 1% 5%;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+
+/* Responsive layout - makes columns stack on smaller screens */
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0 10px;
+        /* Less padding on smaller screens */
+    }
+
+    .row {
+        margin: 15px 0;
+    }
+
+    .column {
+        flex: 0 0 100%;
+        /* On screens up to 800px, each column takes full width */
+        max-width: 100%;
+        /* Ensure it takes full width */
+        padding: 0 5px;
+        /* Adjust padding for mobile */
+    }
+
+    /* Adjust font size and padding for overlay text on smaller screens */
+    .overlay-text h1 {
+        font-size: 1.2em;
+        /* Smaller, but readable font size */
+        margin-bottom: 5px;
+    }
+
+    .overlay-text {
+        padding: 8px 10px;
+        bottom: 5px;
+        /* Adjust position slightly */
+        left: 5px;
+        right: 5px;
+    }
+
+    .img-btn {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Adjust the second column image margins for smaller screens */
+    .column:nth-child(2) img {
+        margin-top: 10px;
+        /* Ensure a consistent gap between stacked images */
+        width: 100%;
+        /* Ensure they take full width */
+        height: auto;
+    }
+
+    /* The very first image in the second column (when stacked) should not have a top margin */
+    .column:nth-child(2) img:first-of-type {
+        margin-top: 0;
+    }
+}
+
+/* For even smaller mobile screens if needed */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    .row {
+        margin: 10px 0;
+    }
+
+    .overlay-text h1 {
+        font-size: 1em;
+        /* Even smaller font size for very small screens */
+    }
+
+    .img-btn {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+}
+
+.newProducts {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.newProducts h1 {
+    color: #6b4423;
+    font-size: 50px;
+}
+
+.newProducts .explore-btn {
+    margin-top: 1%;
+    color: #321905;
+    background-color: #9d9d9da5;
+    padding: 0.5% 2%;
+    -webkit-box-shadow: -4px -3px #6b4423;
+    -moz-box-shadow: -4px -3px #6b4423;
+    box-shadow: -4px -3px #6b4423;
+    font-size: 20px;
+    border: none;
+}
+
+.newProducts .card-container {
+    margin: 3%;
+}
+
+.details {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 3%;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+
+.details h1 {
+    color: #6b4423;
+    margin-bottom: 1%;
+}
+
+.bi-suit-heart-fill,
+.bi-leaf-fill,
+.bi-people-fill {
+    color: #6b4423;
+    font-size: 50px;
+}
+
+.details p {
+    font-size: 20px;
+    color: #555;
+}
+
+.column-details {
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-details {
+    margin-top: 2%;
+    align-items: center;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.row-details:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .column-detials {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card-details {
+    padding: 3%;
+    margin: 3%;
+    text-align: center;
+    background-color: white;
+}
+
+.reviews {
+    margin-top: 2%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.reviews h1 {
+    color: #6b4423;
+    margin-bottom: 2%;
+}
+
+.column-reviews {
+    float: left;
+    width: 30%;
+    /* padding: 0 10px; */
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-reviews {
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+
+/* Clear floats after the columns */
+.row-reviews:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bi-star-fill{
+    color: rgb(255, 196, 0);
+    font-size: 25px;
+    margin-right: 2%;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .column-reviews {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card-reviews {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 25%;
+    text-align: center;
+    background-color: white;
+}
+
+.footer-bottom p {
     color: #9d7652;
     font-size: 0.875rem;
     line-height: 1.6;
     margin: 0;
 }
+
 /* footer-icon */
 /* .icon-facebook {
   color: #3b5998; 
@@ -443,71 +738,32 @@ body {
         gap: 47px;
     }
 }
+
 /* back to Top  */
 #backToTopBtn {
-  display: none; 
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  z-index: 99;
-  font-size: 20px;
-  border: none;
-  outline: none;
-  background-color: #795d41;
-  color: white;
-  cursor: pointer;
-  padding: 12px 18px;
-  border-radius: 8px;
-  transition: opacity 0.3s;
-  /* box-shadow: ; */
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #795d41;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+    /* box-shadow: ; */
 }
 
 #backToTopBtn:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
-.container {
-    padding: 5%;
-}
 
-/* Specific styles for the image layout section (from previous immersive, updated with user's images) */
-.left-section-bg {
-    /* background-image: url(/Imgs/Product-04.jpeg); */
-    /* Placeholder for Product-04.jpeg */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    /* overflow: hidden; */
-    /* width: 50%;
-    height: 100%; */
-}
 
-.overlay-text {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.shop-button {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    background-color: #8B5E3C;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: medium;
-    transition: background-color 0.3s ease;
-}
-
-.shop-button:hover {
-    background-color: #6C482B;
-}
 
 /* .mobile-menu-toggle */
 .mobile-menu-toggle {
