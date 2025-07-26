@@ -486,7 +486,7 @@ body {
 
     /* Adjust font size and padding for overlay text on smaller screens */
     .overlay-text h1 {
-        font-size: 1.2em;
+        font-size: 60px;
         /* Smaller, but readable font size */
         margin-bottom: 5px;
     }
