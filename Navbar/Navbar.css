@@ -277,7 +277,6 @@ body {
     }
 }
 
-<<<<<<< Updated upstream
 /* Footer started */
 .footer {
     background-color: #b9a189;
@@ -470,9 +469,7 @@ body {
 
 
 .container{
-=======
 .container {
->>>>>>> Stashed changes
     padding: 5%;
 }
 
@@ -623,4 +620,5 @@ body {
     .navbar-container {
         padding: 0 64px;
     }
+}
 }
