@@ -12,7 +12,9 @@ body {
 .navbar {
     position: sticky;
     top: 0%;
-    background-color: #29292b;
+    /* background-color: #29292b; */
+    background-color: #2A4F4D;
+    /* background-color: #4E5D48; */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     /* position: relative; */
     z-index: 50;
@@ -279,6 +281,7 @@ body {
 
 /* Footer started */
 .footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #b9a189;
     border-top: 1px solid #e6d7c3;
     padding: 50px;
@@ -323,11 +326,11 @@ body {
 .craftconnect-name {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #6b4423;
+    color: #5b3719;
 }
 
 .craftconnect-description {
-    color: #9d7652;
+    color: #6b4423;
     font-size: 0.875rem;
     line-height: 1.6;
     margin-bottom: 14px;
@@ -350,12 +353,14 @@ body {
 }
 
 .footer-section h4 {
-    color: #6b4423;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5b3719;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 15px;
     /* margin-top: 14px; */
 }
+
 
 .footer-links {
     list-style: none;
@@ -368,7 +373,7 @@ body {
 }
 
 .footer-links a {
-    color: #8a6c42;
+    color: #6b4423;
     text-decoration: none;
     font-size: 13px;
     transition: color 0.2s ease;
@@ -690,7 +695,7 @@ body {
 }
 
 .footer-bottom p {
-    color: #9d7652;
+    color: #5b3618;
     font-size: 0.875rem;
     line-height: 1.6;
     margin: 0;
@@ -756,7 +761,7 @@ body {
     font-size: 20px;
     border: none;
     outline: none;
-    background-color: #795d41;
+    background-color: #2A4F4D;
     color: white;
     cursor: pointer;
     padding: 12px 18px;

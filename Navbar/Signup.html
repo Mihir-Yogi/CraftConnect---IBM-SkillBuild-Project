@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started Now</title>
+    <link rel="stylesheet" href="Signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="signup-header">
+        <h1>Get Started Now</h1>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+        </div>
+
+        <button type="submit" class="signup-btn">Sign up</button>
+      </form>
+
+      <div class="divider">
+        <span>Or continue with</span>
+      </div>
+
+      <!-- <div class="social-buttons">
+        <button type="button" class="social-btn google-btn">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            alt="Google logo"
+            class="social-icon"
+          />
+
+          Continue with Google
+        </button>
+
+        <button type="button" class="social-btn apple-btn">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+            alt="Apple logo"
+            class="social-icon"
+          />
+          Continue with Apple
+        </button>
+      </div> -->
+      <div style="display: flex; gap: 12px; justify-content: center">
+        <!-- Google Button -->
+        <button class="social-btn">
+          <img
+            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            alt="Google logo"
+            class="social-icon"
+          />
+          Continue with Google
+        </button>
+
+        <!-- Apple Button -->
+        <button class="social-btn">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+            alt="Apple logo"
+            class="social-icon"
+          />
+          Continue with Apple
+        </button>
+      </div>
+      <p class="signin-link">
+        Have an account?
+        <a href="#" class="signin-text">Sign in</a>
+      </p>
+    </div>
+  </body>
+</html>
