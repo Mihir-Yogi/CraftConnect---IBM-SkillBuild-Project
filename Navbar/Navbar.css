@@ -170,7 +170,7 @@ body {
 
 .image-stack figcaption {
     margin-top: 8px;
-    font-size: 1rem;
+    font-size: 25px;
     color: #5C4A38;
 }
 
@@ -627,11 +627,11 @@ body {
 }
 
 .reviews {
-    margin-top: 2%;
+    margin-top: 3%;
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 .reviews h1 {
@@ -642,14 +642,14 @@ body {
 .column-reviews {
     float: left;
     width: 30%;
-    /* padding: 0 10px; */
 }
 
 /* Remove extra left and right margins, due to padding */
 .row-reviews {
     justify-content: center;
     align-items: center;
-    margin-left: 5%;
+    margin-left: 7%;
+    margin-top: 3%;
 }
 
 /* Clear floats after the columns */
@@ -677,9 +677,16 @@ body {
 /* Style the counter cards */
 .card-reviews {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 25%;
+    padding: 10%;
     text-align: center;
     background-color: white;
+}
+
+.card-reviews p{
+    margin-top: 3%;
+    color: #6b4423;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .footer-bottom p {
