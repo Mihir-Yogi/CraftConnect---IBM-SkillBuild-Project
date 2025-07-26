@@ -83,7 +83,7 @@ body {
     padding: 2rem;
     padding-right: 50%;
     padding-left: 7%;
-    background-image: url(/CraftConnect---IBM-SkillBuild-Project/Imgs/heroSectionImage.png);
+    background-image: url(/Imgs/heroSectionImage.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
@@ -320,7 +320,6 @@ body {
     }
 }
 
-<<<<<<< HEAD
 /* Footer started */
 .footer {
     background-color: #b9a189;
@@ -512,7 +511,6 @@ body {
 
 
 
-=======
 .container{
     padding: 5%;
 }
@@ -556,7 +554,6 @@ body {
     background-color: #6C482B;
 }
 
->>>>>>> a8c56f315d12658d326c9c0b0e653901b2082134
 /* .mobile-menu-toggle */
 .mobile-menu-toggle {
     display: none;
