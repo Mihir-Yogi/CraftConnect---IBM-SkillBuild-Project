@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: sticky;
     top: 0%;
     /* background-color: #29292b; */
@@ -183,123 +183,130 @@
 }
 
 body {
-  margin: 0;
-  font-family: Playfair Display;
-  background-color: #fcfbf3;
-  color: #3a2d1b;
-  line-height: 1.6;
+    margin: 0;
+    font-family: Playfair Display;
+    background-color: #fcfbf3;
+    color: #3a2d1b;
 }
 
 /* Reset and base styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fdf9f3;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding: 20px;
-  text-align: center; */
-  body {
-  font-family: playfair display;
-  background-color: #fcfbf3;
-  line-height: 1.6;
-}
-.fav-page-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
   text-align: center;
-  padding: 20px;
+} */
+
+body {
+    font-family: playfair display;
+    background-color: #fcfbf3;
+    /* line-height: 1.6; */
 }
 
+.fav-page-wrapper {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* min-height: 60vh; */
+    text-align: center;
+    width: 100%;
+    /* padding: 20px; */
 }
+
+
 
 .fav-page-container {
-  max-width: 400px;
-  width: 100%;
-  background-color: #fcfbf3;
-  padding: 30px 20px;
-  border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    background-color: #fcfbf3;
+    /* padding: 30px 20px;
+    border-radius: 10px; */
+    margin: 5% 5%;
 }
 
 
 .fav-page-title {
-  font-size: 35px;
-  color: #5c3a1d;
-  margin-bottom: 10px;
+    font-size: 50px;
+    color: #745C44;
+    margin-bottom: 10px;
 }
 
 
 .fav-page-subtext {
-  font-size: 14px;
-  color: #b59b84;
-  margin-bottom: 30px;
+    font-size: 20px;
+    color: #b59b84;
+    margin-bottom: 30px;
 }
 
 
 .fav-page-heart {
-  font-size: 50px;
-  color: #b59b84;
-  margin-bottom: 20px;
+    font-size: 150px;
+    color: #745C4480;
 }
 
 
 .fav-page-empty {
-  font-weight: bold;
-  color: #5c3a1d;
-  margin-bottom: 10px;
+    font-weight: bold;
+    color: #745C44;
+    font-size: 30px;
+    margin: 3% 0;
 }
 
 
 
 .fav-page-description {
-  color: #b59b84;
-  font-size: 14px;
-  margin-bottom: 20px;
+    color: #b59b84;
+    font-size: 20px;
+    margin: 5% 0;
 }
 
 
 .fav-page-button {
-  background-color: #8b4513;
-  color: #fff;
-  width: 35vh;
-  height: 6vh;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+    background-color: #8B4513;
+    color: white;
+    /* width: 35vh;
+    height: 6vh; */
+    width: 100%;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 3%;
 }
 
 .fav-page-button:hover {
-  background-color: #6f3610;
+    background-color: #6f3610;
 }
 
 /* Responsive */
 @media (max-width: 500px) {
-  .fav-page-container {
-    padding: 20px 10px;
-  }
+    .fav-page-container {
+        padding: 20px 10px;
+    }
 
-  .fav-page-title {
-    font-size: 24px;
-  }
+    .fav-page-title {
+        font-size: 24px;
+    }
 
-  .fav-page-heart {
-    font-size: 40px;
-  }
+    .fav-page-heart {
+        font-size: 40px;
+    }
 
-  .fav-page-button {
-    width: 100%;
-  }
+    .fav-page-button {
+        width: 100%;
+    }
 }
 
 
