@@ -1,0 +1,99 @@
+body h1,
+body p {
+    color: #745C44;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+body p {
+    font-size: 20px;
+}
+
+.check-icon {
+    margin-top: 4%;
+}
+
+.form-container {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+    margin: 5% 15%;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin: 5% 15%;
+    gap: 20px;
+}
+
+.btn-dashboard,
+.btn-marketplace {
+    width: 100%;
+    padding: 9px 0;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.btn-dashboard {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-marketplace {
+    background-color: transparent;
+    border: 1px solid #8B4513;
+    color: #8B4513;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .form-container{
+        width: 90%;
+        margin: 2% 2%;
+        padding: 2%;
+    }
+    .btn-grid {
+        display: flex;
+        flex-direction: column;
+        margin: 5% 5%;
+        width: 90%;
+        max-width: none;
+    }
+
+    .btn-dashboard,
+    .btn-marketplace {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-grid {
+        gap: 15px;
+    }
+
+    .btn-dashboard,
+    .btn-marketplace {
+        font-size: 16px;
+    }
+}
+
+.form-container h1 {
+    padding-bottom: 1%;
+    text-align: left;
+}
+ul{
+    margin-left: 5%;
+}
+ul li::marker {
+    color: #6b4423;
+    font-size: 30px;
+}
