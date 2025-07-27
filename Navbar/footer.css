@@ -1,112 +1,7 @@
-body h1,
-body p {
-    color: #745C44;
-    text-align: center;
-}
-
-h1 {
-    font-size: 60px;
-}
-
-body p {
-    font-size: 20px;
-}
-
-.form-container {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 2%;
-    margin: 5% 15%;
-}
-
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    margin: 5% 15%;
-    gap: 20px;
-}
-
-.btn-dashboard,
-.btn-marketplace {
-    width: 100%;
-    padding: 9px 0;
-    border: none;
-    font-size: 20px;
-    border-radius: 10px;
-}
-
-.btn-dashboard {
-    background-color: #8B4513;
-    color: white;
-}
-
-.btn-marketplace {
-    background-color: transparent;
-    border: 1px solid #8B4513;
-    color: #8B4513;
-}
-
-@media (max-width: 768px) {
-    .form-container{
-        width: 90%;
-        margin: 2% 2%;
-        padding: 2%;
-    }
-    .btn-grid {
-        display: flex;
-        /* Change to flexbox */
-        flex-direction: column;
-        /* Stack items vertically */
-        margin: 5% 5%;
-        /* Adjust margins for smaller screens */
-        width: 90%;
-        /* Take more width on smaller screens */
-        max-width: none;
-        /* Remove max-width constraint */
-    }
-
-    .btn-dashboard,
-    .btn-marketplace {
-        font-size: 18px;
-        /* Slightly smaller font for mobile */
-        padding: 15px 0;
-        /* More padding for easier tapping */
-    }
-}
-
-/* Further adjustment for very small screens if needed */
-@media (max-width: 480px) {
-    .btn-grid {
-        gap: 15px;
-        /* Slightly less gap on very small screens */
-    }
-
-    .btn-dashboard,
-    .btn-marketplace {
-        font-size: 16px;
-    }
-}
-
-.form-container h1 {
-    margin: 0;
-    padding-bottom: 1%;
-    text-align: left;
-}
-
-ul li::marker {
-    color: #6b4423;
-    font-size: 30px;
-}
 
 /* Footer started */
-.footer-bottom p {
-    color: #9d7652;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
 .footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #b9a189;
     border-top: 1px solid #e6d7c3;
     padding: 50px;
@@ -151,11 +46,11 @@ ul li::marker {
 .craftconnect-name {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #6b4423;
+    color: #5b3719;
 }
 
 .craftconnect-description {
-    color: #9d7652;
+    color: #6b4423;
     font-size: 0.875rem;
     line-height: 1.6;
     margin-bottom: 14px;
@@ -178,12 +73,14 @@ ul li::marker {
 }
 
 .footer-section h4 {
-    color: #6b4423;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5b3719;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 15px;
     /* margin-top: 14px; */
 }
+
 
 .footer-links {
     list-style: none;
@@ -196,7 +93,7 @@ ul li::marker {
 }
 
 .footer-links a {
-    color: #8a6c42;
+    color: #6b4423;
     text-decoration: none;
     font-size: 13px;
     transition: color 0.2s ease;
@@ -213,6 +110,13 @@ ul li::marker {
     text-align: center;
 
     /* margin-top: 2rem; */
+}
+
+.footer-bottom p {
+    color: #5b3618;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* responsive-footer */
@@ -259,4 +163,8 @@ ul li::marker {
 
 #backToTopBtn:hover {
     background-color: #555;
+    color: white;
 }
+
+
+
