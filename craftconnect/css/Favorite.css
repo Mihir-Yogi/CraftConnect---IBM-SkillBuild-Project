@@ -1,43 +1,8 @@
-/* body {
-    margin: 0;
-    font-family: Playfair Display;
-    background-color: #fcfbf3;
-    color: #3a2d1b;
-} */
-
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* body {
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fdf9f3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 20px;
-  text-align: center;
-} */
-
-/* body {
-    font-family: playfair display;
-    background-color: #fcfbf3;
-    line-height: 1.6;
-} */
-
 .fav-page-wrapper {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
-    /* min-height: 60vh; */
     text-align: center;
     width: 100%;
-    /* padding: 20px; */
 }
 
 
@@ -46,8 +11,6 @@
     max-width: 400px;
     width: 100%;
     background-color: #fcfbf3;
-    /* padding: 30px 20px;
-    border-radius: 10px; */
     margin: 5% 5%;
 }
 

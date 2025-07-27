@@ -4,12 +4,14 @@ body p {
     text-align: center;
 }
 
-h1 {
+body h1 {
     font-size: 60px;
+    margin-top: 2%;
 }
 
 body p {
     font-size: 20px;
+    margin-top: 1%;
 }
 
 .processbar {
@@ -45,12 +47,13 @@ body p {
 .step-indicator li:not(:last-child)::after {
     content: '';
     position: absolute;
-    width: 200%;
+    width: 150%;
     height: 3px;
+    margin-left: 5%;
     background-color: #745C44;
     top: 35px;
-    left: calc(100% + 10px);
-    transform: translateY(-50%);
+    left: calc(120% + 10px);
+    /* transform: translateY(-50%); */
 }
 
 .step-indicator .step-number {
@@ -72,19 +75,15 @@ body p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Styling for the text below the numbers */
 .step-indicator li p {
     font-size: 16px;
-    /* Adjust as needed */
     color: #745C4480;
-    /* Match the inactive number color */
     margin-top: 20%;
     text-align: center;
 }
 
 .step-indicator .active p {
     color: #745C44;
-    /* Match the active number color */
     font-weight: bold;
 }
 
@@ -221,14 +220,14 @@ form .button:hover {
 /* Responsive adjustments for the Process Bar */
 @media (max-width: 1023px) {
     .step-indicator ul {
-        width: 250%;
+        width: 100%;
         /* Adjust width for medium screens */
     }
 
     .step-indicator li:not(:last-child)::after {
-        width: 250%;
+        width: 150%;
         /* Slightly reduce line width for smaller screens */
-        left: calc(100% + 5px);
+        left: calc(150% + 5px);
         /* Reduce gap between number and line */
     }
 
@@ -238,18 +237,18 @@ form .button:hover {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 867px) and (min-width: 578px){
     .step-indicator ul {
-        width: 250%;
+        width: 70%;
         /* Wider for smaller screens to maximize space */
         justify-content: space-between;
         /* Ensure good distribution */
     }
 
     .step-indicator li:not(:last-child)::after {
-        width: 170%;
+        width: 150%;
         /* Further reduce line width */
-        left: calc(100% + 5px);
+        left: calc(150% + 5px);
         /* Keep small gap */
     }
 
@@ -407,167 +406,4 @@ form .button:hover {
     body p {
         font-size: 16px;
     }
-}
-
-/* Footer started */
-.footer-bottom p {
-    color: #9d7652;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.footer {
-    background-color: #b9a189;
-    border-top: 1px solid #e6d7c3;
-    padding: 50px;
-}
-
-.footer-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 48px;
-    /* margin-top: 2rem; */
-}
-
-.footer-craftconnect {
-    margin-bottom: 15px;
-}
-
-.craftconnect-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.craftconnect-icon {
-    color: #6b4423;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.5rem;
-    font-size: 16px;
-}
-
-.craftconnect-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #6b4423;
-}
-
-.craftconnect-description {
-    color: #9d7652;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin-bottom: 14px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    color: #9d7652;
-    text-decoration: none;
-    font-size: 1.25rem;
-    transition: color 0.2s ease;
-}
-
-.social-links a:hover {
-    color: #8b4513;
-}
-
-.footer-section h4 {
-    color: #6b4423;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    /* margin-top: 14px; */
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    color: #8a6c42;
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #8b4513;
-
-}
-
-.footer-bottom {
-    border-top: 1px solid #e6d7c3;
-    padding: 2rem 0;
-    text-align: center;
-
-    /* margin-top: 2rem; */
-}
-
-/* responsive-footer */
-@media (min-width: 768px) {
-    .footer-container {
-        padding: 0 24px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 47px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .footer-container {
-        padding: 0 15px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
-        gap: 47px;
-    }
-}
-
-/* back to Top  */
-#backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 40px;
-    right: 30px;
-    z-index: 99;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    background-color: #795d41;
-    color: white;
-    cursor: pointer;
-    padding: 12px 18px;
-    border-radius: 8px;
-    transition: opacity 0.3s;
-    /* box-shadow: ; */
-}
-
-#backToTopBtn:hover {
-    background-color: #555;
 }

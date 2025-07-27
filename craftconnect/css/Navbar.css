@@ -57,19 +57,26 @@ body {
 }
 
 .nav-links {
-    display: flex;
+    display: block;
     align-items: center;
+    justify-content: center;
     gap: 32px;
     list-style: none;
+    /* background-color: red; */
+    width: 100%;
+    margin-left: 15%;
+    margin-top: 1%;
 }
 
 .nav-links a {
     color: #5C4A38 ;
     text-decoration: none;
     padding: 8px 12px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     transition: color 0.2s ease;
+    display: block;
+
 }
 
 .nav-links i{
@@ -117,6 +124,7 @@ body {
     display: none;
     background-color: #B9A189;
     border-top: 1px solid hsl(220, 15%, 25%);
+    font-size: 20px;
     padding: 0.75rem 1rem;
 }
 
@@ -127,6 +135,10 @@ body {
     padding: 0.75rem;
     font-weight: 500;
     transition: color 0.2s ease;
+}
+
+.mobile-nav hr{
+    margin-top: 2%;
 }
 
 .mobile-nav a:hover , .mobile-nav i:hover {
