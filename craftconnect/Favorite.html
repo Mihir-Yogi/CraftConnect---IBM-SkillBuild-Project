@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CraftConnect</title>
-  <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="footer.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About CraftConnect</title>
+  <link rel="stylesheet" href="css/Favorite.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -55,86 +55,16 @@
       <a href="Signin.html">Sign In</a>
     </div>
   </nav>
-  <h1>Get In Touch</h1>
-  <p>We'd love to hear from you. Whether you're an artisan looking to join our <br> community or a customer with
-    questions,
-    we're here to help.</p>
-
-  <div class="grid-container">
-    <div class="contact-form">
-      <h2>Send us a Message</h2>
-      <form action="#">
-        <div class="user-details">
-          <!-- Input box for full name -->
-          <div class="input-box name-field">
-            <span class="details">First Name*</span>
-            <input type="text" placeholder="" required>
-          </div>
-          <!-- Input box for username -->
-          <div class="input-box name-field">
-            <span class="details">Last Name*</span>
-            <input type="text" placeholder="" required>
-          </div>
-          <!-- Input box for email -->
-          <div class="input-box">
-            <span class="details">Email Address*</span>
-            <input type="text" placeholder="" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Subject</span>
-            <input type="text" placeholder="" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Message*</span>
-            <textarea type="text" placeholder="Tell us how we can help you..." required></textarea>
-          </div>
-        </div>
-        <!-- Button container -->
-        <div class="button-container">
-          <div class="button">
-            <!-- Submit button -->
-            <input type="submit" value="Send a Message">
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="contact-info">
-      <h2>Contact Information</h2>
-      <div class="info-grid">
-        <div class="info-icon"><i class="bi bi-pin-map-fill"></i></div>
-        <h4>Address</h4>
-        <p>123 Artisan Way Creative District Gujrat,384440,India</p>
-      </div>
-      <div class="info-grid">
-        <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
-        <h4>Phone</h4>
-        <p>+91 1234567890</p>
-      </div>
-      <div class="info-grid">
-        <div class="info-icon"><i class="bi bi-envelope"></i></div>
-        <h4>Email</h4>
-        <p>hello@craftconnect.com</p>
-      </div>
-      <div class="info-grid">
-        <div class="info-icon"><i class="bi bi-clock"></i></div>
-        <h4>Business Hours</h4>
-        <p>Monday-Friday: 9:00 AM-8:00 PM <br> Saturday: 10:00 AM - 4:00 PM <br> Sunday Closed</p>
-      </div>
+  <div class="fav-page-wrapper">
+    <div class="fav-page-container">
+      <h1 class="fav-page-title">Your Favourites</h1>
+      <p class="fav-page-subtext">Keep track of the products and artisans you love</p>
+      <div class="fav-page-heart">&#10084;</div>
+      <p class="fav-page-empty">No favourites yet</p>
+      <p class="fav-page-description">Start exploring and save products you love</p>
+      <a href="products.html" class="fav-page-button">Start Discovering</a>
     </div>
   </div>
-  <div class="grid-container">
-    <div class="follow-us">
-      <h2>Follow Us</h2>
-      <i class="bi bi-instagram"></i><i class="bi bi-facebook"></i><i class="bi bi-twitter-x"></i><i
-        class="bi bi-pinterest"></i>
-      <p>Stay updated with our latest artisan features and craft impartation!</p>
-    </div>
-    <div class="map">
-      <i class="bi bi-map-fill"></i>
-      <p>Interactive Map <br> Map immigration coming soon</p>
-    </div>
-  </div>
-
   <!-- Footer Started  -->
   <footer class="footer">
     <div class="footer-container">
@@ -204,7 +134,7 @@
   <!-- back to Top button -->
 
   <button onclick="topFunction()" id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

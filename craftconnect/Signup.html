@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About CraftConnect</title>
-  <link rel="stylesheet" href="Favorite.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="footer.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started Now</title>
+  <link rel="stylesheet" href="css/Signup.css" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -55,15 +55,73 @@
       <a href="Signin.html">Sign In</a>
     </div>
   </nav>
-  <div class="fav-page-wrapper">
-    <div class="fav-page-container">
-      <h1 class="fav-page-title">Your Favourites</h1>
-      <p class="fav-page-subtext">Keep track of the products and artisans you love</p>
-      <div class="fav-page-heart">&#10084;</div>
-      <p class="fav-page-empty">No favourites yet</p>
-      <p class="fav-page-description">Start exploring and save products you love</p>
-      <a href="products.html" class="fav-page-button">Start Discovering</a>
+  <div class="signup-container">
+    <div class="signup-header">
+      <h1>Get Started Now</h1>
     </div>
+
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" />
+      </div>
+
+      <button type="submit" class="signup-btn">Sign up</button>
+    </form>
+
+    <div class="divider">
+      <span>Or continue with</span>
+    </div>
+
+    <!-- <div class="social-buttons">
+        <button type="button" class="social-btn google-btn">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            alt="Google logo"
+            class="social-icon"
+          />
+
+          Continue with Google
+        </button>
+
+        <button type="button" class="social-btn apple-btn">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+            alt="Apple logo"
+            class="social-icon"
+          />
+          Continue with Apple
+        </button>
+      </div> -->
+    <div style="display: flex; gap: 12px; justify-content: center">
+      <!-- Google Button -->
+      <button class="social-btn">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo"
+          class="social-icon" />
+        Continue with Google
+      </button>
+
+      <!-- Apple Button -->
+      <button class="social-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple logo"
+          class="social-icon" />
+        Continue with Apple
+      </button>
+    </div>
+    <p class="signin-link">
+      Have an account?
+      <a href="Signin.html" class="signin-text">Sign in</a>
+    </p>
   </div>
   <!-- Footer Started  -->
   <footer class="footer">
@@ -134,7 +192,7 @@
   <!-- back to Top button -->
 
   <button onclick="topFunction()" id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
