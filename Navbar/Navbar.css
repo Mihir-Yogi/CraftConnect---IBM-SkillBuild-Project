@@ -72,7 +72,7 @@ body {
     transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, i:hover {
     color: #dbaa7a;
 
 }
@@ -125,7 +125,7 @@ body {
     transition: color 0.2s ease;
 }
 
-.mobile-nav a:hover {
+.mobile-nav a:hover , i:hover {
     color: #dbaa7a;
 }
 
@@ -873,7 +873,7 @@ body {
     font-size: 20px;
     border: none;
     outline: none;
-    background-color: #2A4F4D;
+    background-color: #795d41;
     color: white;
     cursor: pointer;
     padding: 12px 18px;
