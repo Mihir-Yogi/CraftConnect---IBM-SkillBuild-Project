@@ -13,12 +13,13 @@ body {
     position: sticky;
     top: 0%;
     /* background-color: #29292b; */
-    background-color: #FCFAF2;
+    background-color: #B9A189;
     /* background-color: #4E5D48; */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     /* position: relative; */
     z-index: 50;
     border-bottom: 2px solid black;
+    margin-bottom: 3%;
 }
 
 .navbar-container {
@@ -44,11 +45,11 @@ body {
 .logo-icon {
     width: 32px;
     height: 32px;
-    color: #745C44;
+    color: #5C4A38;
 }
 
 .logo-text {
-    color: #745C44;
+    color: #5C4A38 ;
     font-size: 25px;
     font-weight: 600;
     letter-spacing: 0.025em;
@@ -64,7 +65,7 @@ body {
 }
 
 .nav-links a {
-    color: #64523f;
+    color: #5C4A38 ;
     text-decoration: none;
     padding: 8px 12px;
     font-size: 17px;
@@ -72,8 +73,12 @@ body {
     transition: color 0.2s ease;
 }
 
+.nav-links i{
+    color: #5C4A38;
+}
+
 .nav-links a:hover, .nav-links i:hover {
-    color: #dbaa7a;
+    color: white;
 
 }
 
@@ -83,14 +88,14 @@ body {
     display: none;
     background: none;
     border: none;
-    color: #64523f;
+    color: #5C4A38;
     cursor: pointer;
     padding: 0.5rem;
     transition: color 0.2s ease;
 }
 
 .mobile-menu-toggle:hover {
-    color: #dbaa7a;
+    color: white;
 }
 
 .hamburger {
@@ -111,14 +116,14 @@ body {
 /* Mobile Navigation */
 .mobile-nav {
     display: none;
-    background-color: #FCFAF2;
+    background-color: #B9A189;
     border-top: 1px solid hsl(220, 15%, 25%);
     padding: 0.75rem 1rem;
 }
 
 .mobile-nav a {
     display: block;
-    color: #64523f;
+    color: #5C4A38;
     text-decoration: none;
     padding: 0.75rem;
     font-weight: 500;
@@ -126,7 +131,7 @@ body {
 }
 
 .mobile-nav a:hover , .mobile-nav i:hover {
-    color: #dbaa7a;
+    color: white;
 }
 
 /* Mobile Menu Toggle Checkbox */
