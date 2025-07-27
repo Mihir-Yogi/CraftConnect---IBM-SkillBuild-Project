@@ -55,16 +55,27 @@
       <a href="#signin">Sign In</a>
     </div>
   </nav>
-  <section>
+  <section class="main-dashboard">
     <h1>Welcome back, Artisan!</h1>
     <p class="subheading">Manage your products and grow your craft business</p>
 
     <div class="card">
       <h2>Add New Product</h2>
-      <div class="form-group">
-        <input type="file" placeholder="Upload Product Image" />
-        <input type="text" placeholder="Enter Product Name *" />
-        <input type="text" placeholder="Enter Product Details *" />
+      <div class="form-container">
+        <div class="form-group">
+          <label for="productImage">Product Image *</label>
+          <input type="file" id="productImage" name="productImage" placeholder="Upload Product Image">
+        </div>
+
+        <div class="form-group">
+          <label for="productName">Product Name *</label>
+          <input type="text" id="productName" name="productName" placeholder="Enter Product name">
+        </div>
+
+        <div class="form-group">
+          <label for="productDetails">Product Details *</label>
+          <input type="text" id="productDetails" name="productDetails" placeholder="Enter Product Details">
+        </div>
       </div>
       <button>Add Product</button>
     </div>
@@ -72,8 +83,7 @@
     <div class="card">
       <h2>Your Products</h2>
       <div class="products-empty">
-        <img src="https://cdn-icons-png.flaticon.com/512/3515/3515327.png" alt="Box icon"
-          style="filter: brightness(0) saturate(100%) invert(0); width: 50px;">
+        <i class="bi bi-box2-fill"></i>
         <h3>No products yet</h3>
         <p>Add your first product using the form above</p>
       </div>

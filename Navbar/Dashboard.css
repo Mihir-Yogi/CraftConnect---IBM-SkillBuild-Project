@@ -1,74 +1,163 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fdf9f2;
-    margin: 0;
-    padding: 20px;
-    color: #4b2e1e;
-}
-
 h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
+    font-size: 60px;
+    margin-bottom: 1%;
+    color: #745C44;
+}
+
+.main-dashboard {
+    margin: 3% 5%;
 }
 
 p.subheading {
-    font-size: 1.1em;
-    color: #6d4c41;
-    margin-bottom: 25px;
+    font-size: 30px;
+    color: #745C44;
+    margin-bottom: 4%;
 }
 
 .card {
     background-color: white;
-    border: 2px solid #8d6e63;
-    border-radius: 8px;
-    padding: 20px;
+    border: 2px solid #745C44;
+    border-radius: 20px;
+    padding: 2%;
     margin-bottom: 30px;
 }
 
 .card h2 {
-    margin-top: 0;
-    font-size: 1.5em;
+    font-size: 35px;
+    margin-bottom: 1%;
+    color: #745C44;
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    margin: 2% 0;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 25px;
+    box-sizing: border-box;
 }
 
 .form-group {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.form-group input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #c9a98f;
-    border-radius: 4px;
-    font-size: 1em;
-    background-color: #f9f5ed;
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #745C44;
+    font-size: 16px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #745C44;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #745C44;
+    background-color: #fffaf0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="file"]::placeholder {
+    color: #745C4480;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="file"]:focus {
+    border-color: #745C44;
+}
+
+.form-group input[type="file"] {
+    color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.form-group input[type="file"]::before {
+    content: 'Upload Product Image';
+    color: #745C4480;
+    display: inline-block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        flex-direction: column;
+        /* Stack items vertically */
+        gap: 20px;
+    }
+
+    .form-group {
+        min-width: unset;
+        /* Remove min-width for full flexibility */
+        width: 100%;
+        /* Take full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="file"] {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #8d4b23;
+    padding: 10px 40px;
+    background-color: #8B4513;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 button:hover {
     background-color: #753a18;
 }
 
+.bi-box2-fill{
+    font-size: 100px;
+    color: #745C44B2;
+}
+
 .products-empty {
     text-align: center;
-    color: #6d4c41;
-    padding: 40px 10px;
+    color: #745C44;
 }
 
 .products-empty img {
@@ -78,13 +167,13 @@ button:hover {
 }
 
 .products-empty h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2em;
+    margin: 2% 0;
+    font-size: 50px;
 }
 
 .products-empty p {
-    font-size: 0.95em;
-    color: #8d6e63;
+    font-size: 19px;
+    color: #745C44;
 }
 
 .footer-bottom p {
