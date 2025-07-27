@@ -1,0 +1,803 @@
+body {
+    background-color: #FCFAF2;
+}
+
+.navbar {
+    position: sticky;
+    top: 0%;
+    background-color: #29292b;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    /* position: relative; */
+    z-index: 50;
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11.2px;
+
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    color: hsl(30, 45%, 65%);
+}
+
+.logo-text {
+    color: hsl(30, 45%, 65%);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    /* text-decoration: none; */
+
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: hsl(30, 45%, 65%);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: hsl(30, 55%, 75%);
+
+}
+
+/* .mobile-menu-toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: hsl(30, 45%, 65%);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+    color: hsl(30, 55%, 75%);
+}
+
+.hamburger {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    background-color: hsl(220, 15%, 15%);
+    border-top: 1px solid hsl(220, 15%, 25%);
+    padding: 0.75rem 1rem;
+}
+
+.mobile-nav a {
+    display: block;
+    color: hsl(30, 45%, 65%);
+    text-decoration: none;
+    padding: 0.75rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav a:hover {
+    color: hsl(30, 55%, 75%);
+}
+
+/* Mobile Menu Toggle Checkbox */
+.mobile-menu-checkbox {
+    display: none;
+}
+
+.mobile-menu-checkbox:checked~.mobile-nav {
+    display: block;
+}
+
+.mobile-menu-checkbox:checked~.navbar-content .mobile-menu-toggle .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-checkbox:checked~.navbar-content .mobile-menu-toggle .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-checkbox:checked~.navbar-content .mobile-menu-toggle .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* responsive layout */
+@media(max-width:765px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 16px;
+        z-index: 60;
+    }
+
+    .navbar-container {
+        padding: 0 8px;
+    }
+}
+
+
+@media(max-width:640px) and (min-width:768px) {
+    .navbar-container {
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar-container {
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar-container {
+        padding: 0 64px;
+    }
+}
+
+body h1,
+body p {
+    color: #745C44;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+body p {
+    font-size: 20px;
+}
+
+.processbar {
+    justify-content: center;
+    width: 100%;
+    margin: 3% 0%;
+}
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.step-indicator ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.step-indicator li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-indicator li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 3px;
+    background-color: #745C44;
+    top: 35px;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+}
+
+.step-indicator .step-number {
+    width: 70px;
+    height: 70px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #745C4480;
+    font-weight: bold;
+    font-size: 40px;
+    box-sizing: border-box;
+}
+
+.step-indicator .active .step-number {
+    color: #745C44;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Styling for the text below the numbers */
+.step-indicator li p {
+    font-size: 16px;
+    /* Adjust as needed */
+    color: #745C4480;
+    /* Match the inactive number color */
+    margin-top: 20%;
+    text-align: center;
+}
+
+.step-indicator .active p {
+    color: #745C44;
+    /* Match the active number color */
+    font-weight: bold;
+}
+
+.form-container {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+    margin: 5% 15%;
+}
+
+.form-container h1,
+.form-container p {
+    margin: 0;
+    padding-bottom: 1%;
+}
+
+/* --- Additional Responsive CSS --- */
+
+/* Responsive adjustments for the Process Bar */
+@media (max-width: 1023px) {
+    .step-indicator ul {
+        width: 250%;
+        /* Adjust width for medium screens */
+    }
+
+    .step-indicator li:not(:last-child)::after {
+        width: 250%;
+        /* Slightly reduce line width for smaller screens */
+        left: calc(100% + 5px);
+        /* Reduce gap between number and line */
+    }
+
+    .step-indicator li:not(:last-child) {
+        margin-right: 110px;
+        /* Adjust margin to match new line width + gap */
+    }
+}
+
+@media (max-width: 767px) {
+    .step-indicator ul {
+        width: 250%;
+        /* Wider for smaller screens to maximize space */
+        justify-content: space-between;
+        /* Ensure good distribution */
+    }
+
+    .step-indicator li:not(:last-child)::after {
+        width: 170%;
+        /* Further reduce line width */
+        left: calc(100% + 5px);
+        /* Keep small gap */
+    }
+
+    .step-indicator li:not(:last-child) {
+        margin-right: 70px;
+        /* Adjust margin to match new line width + gap */
+    }
+
+    /* Adjust font size for the step numbers on very small screens */
+    .step-indicator .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        top: 25px;
+        /* Adjust top for smaller circle */
+    }
+
+    /* Adjust the text below the numbers */
+    .step-indicator li p {
+        font-size: 14px;
+        /* Smaller font size for labels */
+        margin-top: 10px;
+        /* Adjust margin-top for closer text */
+    }
+
+    /* Adjust the line's vertical position for smaller circles */
+    .step-indicator li:not(:last-child)::after {
+        top: 25px;
+        /* Half of 50px diameter */
+    }
+}
+
+@media (max-width: 500px) {
+    .step-indicator ul {
+        flex-wrap: wrap;
+        /* Allow steps to wrap to the next line if too narrow */
+        justify-content: center;
+        /* Center steps when wrapped */
+        gap: 20px 0;
+        /* Add vertical gap when wrapped */
+    }
+
+    .step-indicator li {
+        width: 45%;
+        /* Allow two items per row */
+        margin-right: 0 !important;
+        /* Reset margin-right for wrapped items */
+    }
+
+    /* Hide the lines completely if steps wrap, or re-think their positioning */
+    .step-indicator li:not(:last-child)::after {
+        display: none;
+        /* Hide lines if steps are wrapping unpredictably */
+    }
+
+    /* If you still want lines when wrapped, you'd need a more complex grid/flex setup */
+}
+
+/* Ensure global h1 and p are responsive for content outside form */
+@media (max-width: 767px) {
+    body h1 {
+        font-size: 40px;
+    }
+
+    body p {
+        font-size: 18px;
+    }
+    .form-container{
+        width: 95%;
+        margin: 1%;
+    }
+}
+
+@media (max-width: 480px) {
+    body h1 {
+        font-size: 32px;
+    }
+
+    body p {
+        font-size: 16px;
+    }
+    .form-container{
+        width: 95%;
+        margin: 1%;
+    }
+}
+
+.form-group {
+    margin-top: 3%;
+    margin-bottom: 24px;
+    /* mb-6 equivalent */
+}
+
+.form-label {
+    display: block;
+    color: #745C44B2;
+    /* text-gray-700 equivalent */
+    font-size: 20px;
+    /* text-sm equivalent */
+    font-weight: 500;
+    /* font-medium equivalent */
+    margin-bottom: 8px;
+    /* mb-2 equivalent */
+}
+
+.form-input-wrapper {
+    position: relative;
+}
+
+.form-input,
+.form-textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    background-color: #FCFAF2;
+    color: #4a5568;
+    /* text-gray-700 equivalent */
+    border: 1px solid #745C44;
+    /* custom-input border-color */
+    border-radius: 8px;
+    /* rounded-lg equivalent */
+    padding: 12px 16px;
+    /* py-3 px-4 equivalent */
+    line-height: 1.5;
+    /* leading-tight equivalent */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #745C44;
+    /* custom-input:focus box-shadow */
+    background-color: #FCFAF2;
+}
+
+.form-textarea {
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+.input-icon-right {
+    position: absolute;
+    inset-block-start: 0;
+    /* inset-y-0 equivalent */
+    inset-inline-end: 0;
+    /* right-0 equivalent */
+    display: flex;
+    align-items: center;
+    padding-inline-end: 8px;
+    /* px-2 equivalent */
+    color: #4a5568;
+    /* text-gray-700 equivalent */
+    pointer-events: none;
+}
+
+.input-icon-left {
+    position: absolute;
+    inset-block-start: 0;
+    /* inset-y-0 equivalent */
+    inset-inline-start: 0;
+    /* left-0 equivalent */
+    display: flex;
+    align-items: center;
+    padding-inline-start: 12px;
+    /* pl-3 equivalent */
+    color: #6b7280;
+    /* text-gray-500 equivalent */
+    pointer-events: none;
+    height: 100%;
+    /* Ensure icon is vertically centered */
+}
+
+.form-input.with-left-icon {
+    padding-inline-start: 40px;
+    /* pl-10 equivalent (32px + 8px for icon width/spacing) */
+}
+
+.form-input.with-at-prefix {
+    padding-inline-start: 32px;
+    /* pl-8 equivalent (24px + 8px for @) */
+}
+
+.form-input.with-right-icon {
+    padding-inline-end: 40px;
+    /* pr-10 equivalent */
+}
+
+.social-media-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    /* gap-6 equivalent */
+    margin-bottom: 32px;
+    /* mb-8 equivalent */
+}
+
+@media (min-width: 768px) {
+
+    /* md breakpoint equivalent */
+    .social-media-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.navigation-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    /* mt-8 equivalent */
+    padding-top: 16px;
+    /* pt-4 equivalent */
+    border-top: 1px solid #e2e8f0;
+    /* border-t border-gray-200 equivalent */
+}
+
+@media (min-width: 640px) {
+
+    /* sm breakpoint equivalent */
+    .navigation-section {
+        flex-direction: row;
+    }
+
+    .step-info {
+        margin-bottom: 0;
+        /* sm:mb-0 equivalent */
+    }
+}
+
+.step-info {
+    color: #745C44;
+    /* text-gray-600 equivalent */
+    font-size: 20px;
+    /* text-sm equivalent */
+    margin-bottom: 16px;
+    /* mb-4 equivalent */
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    /* space-x-4 equivalent */
+}
+
+.form-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    /* px-6 py-3 equivalent */
+    border-radius: 8px;
+    /* rounded-lg equivalent */
+    font-weight: 500;
+    /* font-medium equivalent */
+    font-size: 14px;
+    /* text-sm equivalent */
+    transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+    cursor: pointer;
+}
+
+.back-button {
+    border: 1px solid #745C44;
+    color: #745C44;
+    background-color: #FCFAF2;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    /* shadow-sm equivalent */
+}
+
+.back-button:hover {
+    background-color: #FCFAF2;
+}
+
+.create-profile-button {
+    background-color: #8B4513;
+    /* Dark brown color */
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: none;
+    font-size: 20px;
+    /* shadow-md equivalent */
+}
+
+.create-profile-button:hover {
+    background-color: #8B4513;
+    /* Slightly darker brown on hover */
+}
+
+.button-icon {
+    width: 16px;
+    /* w-4 equivalent */
+    height: 16px;
+    /* h-4 equivalent */
+}
+
+.button-icon.left {
+    margin-right: 8px;
+    /* mr-2 equivalent */
+}
+
+.button-icon.right {
+    margin-left: 8px;
+    /* ml-2 equivalent */
+}
+
+@media (min-width: 768px) { /* md breakpoint equivalent */
+    .social-media-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 640px) { /* sm breakpoint equivalent */
+    .navigation-section {
+        flex-direction: row;
+    }
+    .step-info {
+        margin-bottom: 0; /* sm:mb-0 equivalent */
+    }
+}
+
+/* Footer started */
+.footer-bottom p {
+    color: #9d7652;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer {
+    background-color: #b9a189;
+    border-top: 1px solid #e6d7c3;
+    padding: 50px;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+    /* margin-top: 2rem; */
+}
+
+.footer-craftconnect {
+    margin-bottom: 15px;
+}
+
+.craftconnect-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.craftconnect-icon {
+    color: #6b4423;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    font-size: 16px;
+}
+
+.craftconnect-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #6b4423;
+}
+
+.craftconnect-description {
+    color: #9d7652;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #9d7652;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #8b4513;
+}
+
+.footer-section h4 {
+    color: #6b4423;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    /* margin-top: 14px; */
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #8a6c42;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #8b4513;
+
+}
+
+.footer-bottom {
+    border-top: 1px solid #e6d7c3;
+    padding: 2rem 0;
+    text-align: center;
+
+    /* margin-top: 2rem; */
+}
+
+/* responsive-footer */
+@media (min-width: 768px) {
+    .footer-container {
+        padding: 0 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 47px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 47px;
+    }
+}
+
+/* back to Top  */
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #795d41;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+    /* box-shadow: ; */
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
+
