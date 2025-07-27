@@ -215,6 +215,38 @@ p {
     width: 100%;
 }
 
+
+@media (max-width: 768px) {
+    .filters {
+        grid-template-columns: 1fr; /* Two columns per row */
+        margin: 5% 5%; /* Adjust margin for smaller screens */
+        gap: 15px;
+    }
+    .filter-item .p-none{
+        margin-top: 2%;
+        display: none;
+    }
+}
+
+/* For screens smaller than 480px (common mobile phones) */
+@media (max-width: 480px) {
+    .filters {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+        margin: 5% 3%; /* Further adjust margin */
+        padding: 4%;
+        gap: 10px;
+    }
+
+    .filter-item select {
+        font-size: 14px; /* Slightly smaller font size for better fit */
+    }
+
+    /* Adjust the "Apply Filters" button specifically for mobile if needed */
+    .filter-item .p-none{
+        display: none;
+    }
+}
+
 .products-list {
     margin: 3% 10%;
 }
@@ -285,6 +317,7 @@ p {
     margin-top: 5%;
     color: #745C44;
 }
+
 
 
 .footer-bottom p {
