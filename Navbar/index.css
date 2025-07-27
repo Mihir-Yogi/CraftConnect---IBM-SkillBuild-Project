@@ -479,16 +479,6 @@
     margin-right: 2%;
 }
 
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-    .column-reviews {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
-}
-
-/* Style the counter cards */
 .card-reviews {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 10%;
@@ -501,4 +491,20 @@
     color: #6b4423;
     font-weight: bold;
     font-size: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .row-reviews{
+        margin: 2%;
+    }
+    .column-reviews{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 600px){
+    .column-reviews{
+        width: 100%;
+        margin: 0;
+    }
 }

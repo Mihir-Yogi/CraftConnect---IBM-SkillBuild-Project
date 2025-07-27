@@ -113,7 +113,7 @@ form .button input:hover {
     background-color: #76624d;
 }
 
-@media(max-width: 584px) {
+@media(max-width: 884px) {
     .grid-container {
         grid-template-columns: 1fr;
     }
