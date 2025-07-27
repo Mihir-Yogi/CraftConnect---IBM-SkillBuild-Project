@@ -101,6 +101,10 @@ body p {
     padding-bottom: 1%;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* --- Additional Responsive CSS --- */
 
 /* Responsive adjustments for the Process Bar */

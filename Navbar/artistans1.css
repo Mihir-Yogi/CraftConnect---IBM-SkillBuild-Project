@@ -139,7 +139,7 @@ form .input-box span.details {
 }
 
 .user-details .input-box select {
-    width: 103%;
+    width: 100%;
 }
 
 .user-details .input-box input:focus,
@@ -149,32 +149,14 @@ form .input-box span.details {
     color: #745C4480;
 }
 
-form .gender-details .gender-title {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-form .category {
-    display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
-}
-
-form .category label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+form .button {
+    height: 45px;
+    margin: 35px 0;
 }
 
 form .button {
-    height: 45px;
-    margin: 35px 0
-}
-
-form .button input {
     height: 100%;
-    width: 100%;
+    width: 50%;
     border-radius: 5px;
     border: none;
     color: #fff;
@@ -184,12 +166,25 @@ form .button input {
     cursor: pointer;
     transition: all 0.3s ease;
     background: #8B4513;
+    padding: 10px 30px;
+    margin: 2% 1%;
+    text-decoration: none;
+    text-align: center;
 }
 
-form .button input:hover {
-    /* transform: scale(0.99); */
-    background: l#C5A289;
+.button-container{
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    justify-content: center;
 }
+
+form .button:hover {
+    /* transform: scale(0.99); */
+    background: #6d350d;
+}
+
+
 
 @media(max-width: 584px) {
     .form-container {
