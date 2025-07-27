@@ -27,7 +27,7 @@
 .content-wrapper p {
     font-size: 30px;
     margin-right: 5%;
-    text-align: justify;
+    text-align: left;
     color: #745C44;
 }
 
@@ -61,12 +61,13 @@
 .image-stack {
     background-color: #b9a189;
     padding: 2%;
-    margin-top: 3%;
+    margin-top: 1%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    /* height: 50%; */
 }
 
 .image-stack figure {
@@ -74,8 +75,8 @@
 }
 
 .image-stack img {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid white;
@@ -83,13 +84,13 @@
 }
 
 .image-stack .p1 {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .image-stack .p3 {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
 }
 
 .image-stack figcaption {
@@ -119,12 +120,13 @@
     color: #745C44;
     font-size: 48px;
     font-weight: 700;
+    margin-top: 1%;
 }
 
 .products p {
     color: #745C44;
     margin-top: 1%;
-    /* font-size: 25px; */
+    font-size: 25px;
 }
 
 .card-container {
@@ -186,10 +188,22 @@
     background-color: white;
     padding: 2% 8%;
     margin-top: 5%;
-    margin-left: -50%;
+    margin-left: -65%;
     color: #745C44;
 }
 
+.view-products {
+    text-decoration: none;
+    color: #5C4A38;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.view-products:hover {
+    border: 1px solid #5C4A38;
+    border-radius: 10px;
+    padding: 0.5% 3%;
+}
 
 @media (max-width:640px) and (min-width:768px) {
 
@@ -358,18 +372,27 @@
 .newProducts h1 {
     color: #6b4423;
     font-size: 50px;
+    margin-bottom: 2%;
 }
 
 .newProducts .explore-btn {
-    margin-top: 1%;
     color: #321905;
     background-color: #9d9d9da5;
     padding: 0.5% 2%;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    text-decoration: none;
+}
+
+.newProducts .explore-btn:hover {
     -webkit-box-shadow: -4px -3px #6b4423;
     -moz-box-shadow: -4px -3px #6b4423;
     box-shadow: -4px -3px #6b4423;
-    font-size: 20px;
-    border: none;
+}
+
+.newProducts .explore-btn:active, .newProducts .explore-btn::after {
+    text-decoration: none;
 }
 
 .newProducts .card-container {
@@ -453,17 +476,15 @@
     margin-bottom: 2%;
 }
 
-.column-reviews {
-    float: left;
-    width: 30%;
-}
 
 /* Remove extra left and right margins, due to padding */
 .row-reviews {
     justify-content: center;
     align-items: center;
-    margin-left: 7%;
-    margin-top: 3%;
+    justify-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: white;
 }
 
 /* Clear floats after the columns */
@@ -473,37 +494,50 @@
     clear: both;
 }
 
-.bi-star-fill{
+.column-reviews {
+    float: left;
+    width: 30%;
+    margin-left: 2%;
+    align-self: center;
+}
+.bi-star-fill {
     color: rgb(255, 196, 0);
     font-size: 25px;
     margin-right: 2%;
 }
 
 .card-reviews {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 10%;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    padding: 10% 5%;
     text-align: center;
     background-color: white;
 }
 
-.card-reviews p{
+.card-reviews:hover{
+    /* padding: 20%; */
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-reviews p {
     margin-top: 3%;
     color: #6b4423;
     font-weight: bold;
     font-size: 20px;
 }
 
-@media screen and (max-width: 768px){
-    .row-reviews{
+@media screen and (max-width: 768px) {
+    .row-reviews {
         margin: 2%;
     }
-    .column-reviews{
+
+    .column-reviews {
         width: 100%;
         margin: 0;
     }
 }
-@media screen and (max-width: 600px){
-    .column-reviews{
+
+@media screen and (max-width: 600px) {
+    .column-reviews {
         width: 100%;
         margin: 0;
     }
