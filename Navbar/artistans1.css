@@ -1,0 +1,759 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+body {
+    background-color: #FCFAF2;
+}
+
+.navbar {
+    position: sticky;
+    top: 0%;
+    background-color: #29292b;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    /* position: relative; */
+    z-index: 50;
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11.2px;
+
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    color: hsl(30, 45%, 65%);
+}
+
+.logo-text {
+    color: hsl(30, 45%, 65%);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    /* text-decoration: none; */
+
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: hsl(30, 45%, 65%);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: hsl(30, 55%, 75%);
+
+}
+
+/* .mobile-menu-toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: hsl(30, 45%, 65%);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+    color: hsl(30, 55%, 75%);
+}
+
+.hamburger {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    background-color: hsl(220, 15%, 15%);
+    border-top: 1px solid hsl(220, 15%, 25%);
+    padding: 0.75rem 1rem;
+}
+
+.mobile-nav a {
+    display: block;
+    color: hsl(30, 45%, 65%);
+    text-decoration: none;
+    padding: 0.75rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav a:hover {
+    color: hsl(30, 55%, 75%);
+}
+
+/* Mobile Menu Toggle Checkbox */
+.mobile-menu-checkbox {
+    display: none;
+}
+
+.mobile-menu-checkbox:checked~.mobile-nav {
+    display: block;
+}
+
+.mobile-menu-checkbox:checked~.navbar-content .mobile-menu-toggle .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-checkbox:checked~.navbar-content .mobile-menu-toggle .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-checkbox:checked~.navbar-content .mobile-menu-toggle .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* responsive layout */
+@media(max-width:765px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 16px;
+        z-index: 60;
+    }
+
+    .navbar-container {
+        padding: 0 8px;
+    }
+}
+
+
+@media(max-width:640px) and (min-width:768px) {
+    .navbar-container {
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar-container {
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar-container {
+        padding: 0 64px;
+    }
+}
+
+body h1,
+body p {
+    color: #745C44;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+body p {
+    font-size: 20px;
+}
+
+.processbar {
+    justify-content: center;
+    width: 100%;
+    margin: 3% 0%;
+}
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.step-indicator ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.step-indicator li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-indicator li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 3px;
+    background-color: #745C44;
+    top: 35px;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+}
+
+.step-indicator .step-number {
+    width: 70px;
+    height: 70px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #745C4480;
+    font-weight: bold;
+    font-size: 40px;
+    box-sizing: border-box;
+}
+
+.step-indicator .active .step-number {
+    color: #745C44;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Styling for the text below the numbers */
+.step-indicator li p {
+    font-size: 16px;
+    /* Adjust as needed */
+    color: #745C4480;
+    /* Match the inactive number color */
+    margin-top: 20%;
+    text-align: center;
+}
+
+.step-indicator .active p {
+    color: #745C44;
+    /* Match the active number color */
+    font-weight: bold;
+}
+
+.form-container {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+    margin: 5% 15%;
+}
+
+.form-container h1,
+.form-container p {
+    margin: 0;
+    padding-bottom: 1%;
+}
+
+.form-content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 1%;
+    margin-top: 3%;
+}
+
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 2%;
+    color: #745C44B2;
+    font-size: 20px;
+}
+
+.user-details .input-box input,
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #745C44;
+    transition: all 0.3s ease;
+    background-color: #FCFAF2;
+    color: #745C4480;
+
+}
+
+.user-details .input-box select {
+    width: 103%;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #745C44;
+    background-color: #FCFAF2;
+    color: #745C4480;
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #8B4513;
+}
+
+form .button input:hover {
+    /* transform: scale(0.99); */
+    background: l#C5A289;
+}
+
+@media(max-width: 584px) {
+    .form-container {
+        max-width: 100%;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .category {
+        width: 100%;
+    }
+
+    .form-content form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+@media(max-width: 459px) {
+    .form-container .form-content .category {
+        flex-direction: column;
+    }
+}
+
+/* --- Additional Responsive CSS --- */
+
+/* Responsive adjustments for the Process Bar */
+@media (max-width: 1023px) {
+    .step-indicator ul {
+        width: 250%;
+        /* Adjust width for medium screens */
+    }
+
+    .step-indicator li:not(:last-child)::after {
+        width: 250%;
+        /* Slightly reduce line width for smaller screens */
+        left: calc(100% + 5px);
+        /* Reduce gap between number and line */
+    }
+
+    .step-indicator li:not(:last-child) {
+        margin-right: 110px;
+        /* Adjust margin to match new line width + gap */
+    }
+}
+
+@media (max-width: 767px) {
+    .step-indicator ul {
+        width: 250%;
+        /* Wider for smaller screens to maximize space */
+        justify-content: space-between;
+        /* Ensure good distribution */
+    }
+
+    .step-indicator li:not(:last-child)::after {
+        width: 170%;
+        /* Further reduce line width */
+        left: calc(100% + 5px);
+        /* Keep small gap */
+    }
+
+    .step-indicator li:not(:last-child) {
+        margin-right: 70px;
+        /* Adjust margin to match new line width + gap */
+    }
+
+    /* Adjust font size for the step numbers on very small screens */
+    .step-indicator .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        top: 25px;
+        /* Adjust top for smaller circle */
+    }
+
+    /* Adjust the text below the numbers */
+    .step-indicator li p {
+        font-size: 14px;
+        /* Smaller font size for labels */
+        margin-top: 10px;
+        /* Adjust margin-top for closer text */
+    }
+
+    /* Adjust the line's vertical position for smaller circles */
+    .step-indicator li:not(:last-child)::after {
+        top: 25px;
+        /* Half of 50px diameter */
+    }
+}
+
+@media (max-width: 500px) {
+    .step-indicator ul {
+        flex-wrap: wrap;
+        /* Allow steps to wrap to the next line if too narrow */
+        justify-content: center;
+        /* Center steps when wrapped */
+        gap: 20px 0;
+        /* Add vertical gap when wrapped */
+    }
+
+    .step-indicator li {
+        width: 45%;
+        /* Allow two items per row */
+        margin-right: 0 !important;
+        /* Reset margin-right for wrapped items */
+    }
+
+    /* Hide the lines completely if steps wrap, or re-think their positioning */
+    .step-indicator li:not(:last-child)::after {
+        display: none;
+        /* Hide lines if steps are wrapping unpredictably */
+    }
+
+    /* If you still want lines when wrapped, you'd need a more complex grid/flex setup */
+}
+
+
+/* --- Updated Responsive CSS for Form Container and Form Fields --- */
+
+/* Adjustments for tablets and smaller desktops (around 768px to 1023px) */
+@media (max-width: 1023px) {
+    .form-container {
+        margin: 5% 10%; /* Slightly reduce horizontal margin */
+        padding: 3%; /* Adjust padding */
+    }
+
+    /* Adjust the input box width for better distribution on slightly smaller screens */
+    form .user-details .input-box {
+        width: calc(100% / 2 - 15px); /* Slightly less gap between two columns */
+    }
+}
+
+/* Adjustments for typical mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    .form-container {
+        margin: 5% 5%; /* Significantly reduce horizontal margin */
+        padding: 5%; /* Increase padding for better internal spacing */
+    }
+
+    form .user-details .input-box {
+        width: 100%; /* Make input boxes take full width, stacking vertically */
+        margin-bottom: 15px; /* Ensure consistent vertical spacing */
+    }
+
+    .user-details .input-box select {
+        width: 103%; /* Ensure select also takes full width */
+    }
+
+    form .category {
+        flex-direction: column; /* Stack gender/category options vertically */
+        align-items: flex-start; /* Align stacked items to the left */
+        width: 100%; /* Ensure category container uses full width */
+        margin: 10px 0; /* Adjust margin for stacked categories */
+    }
+
+    form .category label {
+        margin-bottom: 8px; /* Add vertical space between stacked radio buttons */
+    }
+
+    .form-content form .user-details {
+        max-height: none; /* Remove max-height and overflow for better flow on small screens */
+        overflow-y: visible; /* Prevent unnecessary scrollbars unless content truly overflows */
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 0; /* Hide scrollbar if overflow is removed */
+    }
+}
+
+/* Further adjustments for very small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .form-container {
+        margin: 5% 2%; /* Even smaller horizontal margin for very narrow screens */
+        padding: 6%; /* Slightly more padding for internal comfort */
+    }
+
+    form .input-box span.details {
+        font-size: 18px; /* Slightly reduce font size for labels */
+        margin-bottom: 5px; /* Reduce space below labels */
+    }
+
+    .user-details .input-box input,
+    .user-details .input-box select {
+        height: 40px; /* Slightly reduce height of input fields */
+        font-size: 15px; /* Smaller font size for input text */
+        padding-left: 10px; /* Adjust padding */
+    }
+
+    form .button {
+        height: 40px; /* Smaller button height */
+        margin: 25px 0; /* Adjust button margin */
+    }
+
+    form .button input {
+        font-size: 16px; /* Smaller font for button text */
+    }
+}
+
+/* Ensure global h1 and p are responsive for content outside form */
+@media (max-width: 767px) {
+    body h1 {
+        font-size: 40px;
+    }
+    body p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body h1 {
+        font-size: 32px;
+    }
+    body p {
+        font-size: 16px;
+    }
+}
+
+/* Footer started */
+.footer-bottom p {
+    color: #9d7652;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer {
+    background-color: #b9a189;
+    border-top: 1px solid #e6d7c3;
+    padding: 50px;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+    /* margin-top: 2rem; */
+}
+
+.footer-craftconnect {
+    margin-bottom: 15px;
+}
+
+.craftconnect-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.craftconnect-icon {
+    color: #6b4423;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    font-size: 16px;
+}
+
+.craftconnect-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #6b4423;
+}
+
+.craftconnect-description {
+    color: #9d7652;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #9d7652;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #8b4513;
+}
+
+.footer-section h4 {
+    color: #6b4423;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    /* margin-top: 14px; */
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #8a6c42;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #8b4513;
+
+}
+
+.footer-bottom {
+    border-top: 1px solid #e6d7c3;
+    padding: 2rem 0;
+    text-align: center;
+
+    /* margin-top: 2rem; */
+}
+
+/* responsive-footer */
+@media (min-width: 768px) {
+    .footer-container {
+        padding: 0 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 47px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 47px;
+    }
+}
+
+/* back to Top  */
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #795d41;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+    /* box-shadow: ; */
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}

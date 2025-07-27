@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftConnect</title>
+    <link rel="stylesheet" href="artistans1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <input type="checkbox" id="mobile-menu" class="mobile-menu-checkbox" />
+        <div class="navbar-container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" class="logo-icon" fill="currentColor">
+                        <path
+                            d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,15.5C2,15.75 2,16 2,16.25C2,16 2,15.5 2,15.5C2,13.5 3.75,10.25 7,9C10.25,7.75 17,8 17,8Z" />
+                    </svg>
+                    <span class="logo-text">CraftConnect</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#artisans">For Artisans</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#signin">Sign In</a></li>
+                </ul>
+                <!-- for mobile menu button  -->
+                <label for="mobile-menu" class="mobile-menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!-- for mobile view  -->
+        <div class="mobile-nav">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#artisans">For Artisans</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#signin">Sign In</a>
+        </div>
+    </nav>
+    <h1>Join Our Artisan Community</h1>
+    <p>Create your profile and start connecting with customers who <br>
+        appreciate handcrafted goods</p>
+
+    <div class="processbar">
+        <div class="step-indicator">
+            <ul>
+                <li class="step active">
+                    <span class="step-number">1</span>
+                    <p>Personal Info</p>
+                </li>
+                <li class="step">
+                    <span class="step-number">2</span>
+                    <p>Craft Details</p>
+                </li>
+                <li class="step">
+                    <span class="step-number">3</span>
+                    <p>Complete</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1><i class="bi bi-person-fill"></i></h1>
+        <h1>Personal Information</h1>
+        <p>Tell us about yourself and how customers can reach you</p>
+        <div class="form-content">
+            <!-- Registration form -->
+            <form action="#">
+                <div class="user-details">
+                    <!-- Input box for full name -->
+                    <div class="input-box">
+                        <span class="details">Full Name *</span>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <!-- Input box for username -->
+                    <div class="input-box">
+                        <span class="details">Email Address *</span>
+                        <input type="text" placeholder="Enter your Email Address" required>
+                    </div>
+                    <!-- Input box for email -->
+                    <div class="input-box">
+                        <span class="details">Phone Number *</span>
+                        <input type="text" class="phone-icon" placeholder="Enter your Phone Number" required>
+                    </div>
+                    <!-- Input box for password -->
+                    <div class="input-box">
+                        <span class="details">WhatsApp number *</span>
+                        <input type="text" placeholder="Optional - for easier customer communication" required>
+                    </div>
+                    <!-- Input box for confirming password -->
+                    <div class="input-box">
+                        <span class="details">Location *</span>
+                        <select type="text" required>
+                            <option value=""> Select Your Location </option>
+                        </select>
+                    </div>
+                    <!-- Input box for date of birth -->
+                    <div class="input-box">
+                        <span class="details">Profile Image</span>
+                        <input type="text" name="dob" required>
+                    </div>
+                </div>
+                <!-- Button container -->
+                <div class="button-container">
+                    <div class="button">
+                        <!-- Submit button -->
+                        <input type="submit" value="Continue to Craft Details">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Started  -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-craftconnect">
+                    <div class="craftconnect-header">
+                        <div class="craftconnect-icon">
+                            <svg viewBox="0 0 24 24" class="footer-logo-icon" fill="currentColor">
+                                <path
+                                    d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,15.5C2,15.75 2,16 2,16.25C2,16 2,15.5 2,15.5C2,13.5 3.75,10.25 7,9C10.25,7.75 17,8 17,8Z" />
+                            </svg>
+                        </div>
+                        <h3 class="craftconnect-name">CraftConnect</h3>
+                    </div>
+                    <p class="craftconnect-description">
+                        Connecting passionate artisans with customers who appreciate
+                        authentic, handcrafted goods.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="icon-facebook" style="color: #3b5998;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon-instagram" style="color: #e1306c;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-twitter" style="color: #1da1f2;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon-location" style="color: #d32f2f;"><i
+                                class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <!-- Shop Section -->
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Pottery & Ceramics</a></li>
+                        <li><a href="#">Textiles</a></li>
+                        <li><a href="#">Woodwork</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                    </ul>
+                </div>
+                <!-- For Artisans Section -->
+                <div class="footer-section">
+                    <h4>For Artisans</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Start Selling</a></li>
+                        <li><a href="#">Seller Resources</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 CraftConnect. All rights reserved. Made with love for artisans everywhere.</p>
+        </div>
+        </div>
+    </footer>
+    <!-- back to Top button -->
+
+    <button onclick="topFunction()" id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+
+</html>
