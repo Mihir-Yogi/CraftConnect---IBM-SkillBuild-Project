@@ -64,7 +64,7 @@
 .mission-section {
     background-color: #fcfbf3;
     padding: 40px 20px;
-    font-family: 'Segoe UI', sans-serif;
+    /* font-family: 'Segoe UI', sans-serif; */
 }
 
 .mission-container {
@@ -417,16 +417,6 @@ form .button input:hover {
 .follow-us .bi-facebook,
 .follow-us .bi-twitter-x,
 .follow-us .bi-pinterest {
-    /* font-size: 30px;
-    margin-right: 3%;
-    background-color: #745C44;
-    border-radius: 50%;
-    padding: 10px;
-    color: white;
-    height: 50px;
-    width: 50px; */
-    /* width: 60px;
-    height: 60px; */
     padding: 10px 15px;
     background-color: #9c6b3e;
     border-radius: 50%;

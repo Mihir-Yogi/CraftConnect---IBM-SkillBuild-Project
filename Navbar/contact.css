@@ -156,16 +156,16 @@ form .button input:hover {
     padding: 5px 15px;
 }
 
-.contact-info .bi-pin-map-fill,
-.contact-info .bi-telephone-fill,
-.contact-info .bi-envelope,
-.contact-info .bi-clock {
+.follow-us .bi-instagram,
+.follow-us .bi-facebook,
+.follow-us .bi-twitter-x,
+.follow-us .bi-pinterest {
+    padding: 10px 15px;
+    background-color: #9c6b3e;
+    border-radius: 50%;
     color: white;
     font-size: 30px;
-    border-radius: 50%;
-    background-color: #745C44;
-    padding: 10px;
-    margin: 80%; /* This margin might need adjustment for smaller screens */
+    margin-right: 20px;
 }
 
 .info-grid {

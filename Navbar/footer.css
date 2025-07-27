@@ -1,7 +1,7 @@
 
 /* Footer started */
 .footer {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Playfair Display;
     background-color: #b9a189;
     border-top: 1px solid #e6d7c3;
     padding: 50px;
@@ -73,7 +73,7 @@
 }
 
 .footer-section h4 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Playfair Display;
     color: #5b3719;
     font-size: 1rem;
     font-weight: 600;
