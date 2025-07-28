@@ -33,6 +33,19 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    /* Floating animation */
+    animation: bgFloat 7s ease-in-out infinite;
+}
+
+/* Keyframes for smooth scaling in/out */
+@keyframes bgFloat {
+    0%, 100% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
 }
 
 
