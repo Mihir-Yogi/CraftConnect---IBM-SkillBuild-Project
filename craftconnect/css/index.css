@@ -75,8 +75,8 @@
 }
 
 .image-stack img {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid white;
@@ -84,18 +84,18 @@
 }
 
 .image-stack .p1 {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 .image-stack .p3 {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
 }
 
 .image-stack figcaption {
     margin-top: 8px;
-    font-size: 25px;
+    font-size: 15px;
     color: #5C4A38;
 }
 
