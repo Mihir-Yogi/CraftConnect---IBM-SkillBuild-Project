@@ -9,6 +9,14 @@ window.onscroll = function () {
 
 
 function topFunction() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+  const scrollDuration = 600; // duration in ms (0.6s)
+  const scrollStep = -window.scrollY / (scrollDuration / 16); // 60fps approx
 
+  const scrollInterval = setInterval(() => {
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, scrollStep);
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, 16); // ~60 frames per second
+}

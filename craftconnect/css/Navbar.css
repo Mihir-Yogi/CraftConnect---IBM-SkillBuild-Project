@@ -16,18 +16,20 @@ h1, h2, h3, h4, h5, h6, label{
 p, button, span, input{
     font-family: "Inter", sans-serif;
 }
-
 .navbar {
-    position: sticky;
-    top: 0%;
-    /* background-color: #29292b; */
-    background-color: #B9A189;
-    /* background-color: #4E5D48; */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    /* position: relative; */
+    position: fixed; 
+    top: 0;
+    width: 100%;
     z-index: 50;
-    border-bottom: 2px solid black;
+
+    background: rgba(0, 0, 0, 0.133); 
+    backdrop-filter: blur(12px);          
+    -webkit-backdrop-filter: blur(12px);  
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.112); 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
+
 
 .navbar-container {
     max-width: 1280px;
@@ -88,7 +90,7 @@ p, button, span, input{
 }
 
 .nav-links .active a, .nav-links .active i{
-    color: white;
+    color: rgba(255, 255, 255, 0.8);;
     /* background-color: white; */
 }
 
@@ -97,7 +99,7 @@ p, button, span, input{
 }
 
 .nav-links a:hover, .nav-links i:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.8);;
 
 }
 
