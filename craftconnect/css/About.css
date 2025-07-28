@@ -11,6 +11,7 @@
 }
 
 .about-section h1 {
+    /* font-family: "Playfair Display", serif; */
     text-align: center;
     font-size: 60px;
     color: #6c4c2c;
@@ -19,6 +20,7 @@
 }
 
 .subtitle {
+    /* font-family: "Inter", sans-serif; */
     text-align: center;
     font-size: 20px;
     color: #7c6b5e;

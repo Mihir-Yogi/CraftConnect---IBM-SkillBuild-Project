@@ -5,8 +5,16 @@
 }
 
 body {
-    font-family: Playfair Display;
+    /* font-family: Playfair Display; */
     background-color: #FCFAF2;
+}
+
+h1, h2, h3, h4, h5, h6, label{
+    font-family: "Playfair Display", serif;
+}
+
+p, button, span, input{
+    font-family: "Inter", sans-serif;
 }
 
 .navbar {
