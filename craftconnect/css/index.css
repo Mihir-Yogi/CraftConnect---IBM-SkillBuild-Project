@@ -70,6 +70,11 @@
     /* height: 50%; */
 }
 
+.image-stack figure:hover{
+    scale: 104%;
+    transition: scale 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
 .image-stack figure {
     text-align: center;
 }
@@ -79,7 +84,7 @@
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 3px solid white;
     box-shadow: 3px black;
 }
 
@@ -89,8 +94,8 @@
 }
 
 .image-stack .p3 {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 89px;
 }
 
 .image-stack figcaption {
@@ -203,6 +208,7 @@
     border: 1px solid #5C4A38;
     border-radius: 10px;
     padding: 0.5% 3%;
+    transition: border 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 @media (max-width:640px) and (min-width:768px) {
@@ -389,6 +395,7 @@
     -webkit-box-shadow: -4px -3px #6b4423;
     -moz-box-shadow: -4px -3px #6b4423;
     box-shadow: -4px -3px #6b4423;
+    transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 .newProducts .explore-btn:active, .newProducts .explore-btn::after {
@@ -397,6 +404,15 @@
 
 .newProducts .card-container {
     margin: 3%;
+}
+
+.card:hover{
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.card{
+    cursor: pointer;
 }
 
 .details {
@@ -482,9 +498,9 @@
     justify-content: center;
     align-items: center;
     justify-items: center;
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: white;
+    margin-top: 3%;
+    margin-left: 10%;
+    /* background-color: white; */
 }
 
 /* Clear floats after the columns */
@@ -497,7 +513,7 @@
 .column-reviews {
     float: left;
     width: 30%;
-    margin-left: 2%;
+    /* margin-left: 2%; */
     align-self: center;
 }
 .bi-star-fill {
@@ -514,8 +530,10 @@
 }
 
 .card-reviews:hover{
-    /* padding: 20%; */
+    /* padding: 5% 20%; */
+    scale: 105%;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 .card-reviews p {

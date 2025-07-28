@@ -6,7 +6,7 @@ body p {
 
 body h1 {
     font-size: 60px;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 body p {
@@ -32,9 +32,13 @@ body p {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: flex-start;
-    width: 50%;
-    justify-content: space-around;
+    /* Make the ul a flex container */
+    align-items: center;
+    /* Vertically align items (numbers and lines) */
+    width: 70%;
+    /* Adjust overall width as needed, e.g., 80% or 90% */
+    justify-content: space-between;
+    /* This is key for distributing space! */
 }
 
 .step-indicator li {
@@ -42,20 +46,12 @@ body p {
     flex-direction: column;
     align-items: center;
     position: relative;
+    /* If you have other absolutely positioned elements inside */
+    flex-shrink: 0;
+    /* Prevent steps from shrinking when space is tight */
 }
 
-.step-indicator li:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    width: 150%;
-    height: 3px;
-    margin-left: 5%;
-    background-color: #745C44;
-    top: 35px;
-    left: calc(120% + 10px);
-    /* transform: translateY(-50%); */
-}
-
+/* Your existing .step-number and p styles */
 .step-indicator .step-number {
     width: 70px;
     height: 70px;
@@ -78,14 +74,121 @@ body p {
 .step-indicator li p {
     font-size: 16px;
     color: #745C4480;
-    margin-top: 20%;
+    margin-top: 10px;
+    /* Adjusted spacing */
     text-align: center;
+    white-space: nowrap;
+    /* Prevents text wrap that can mess with alignment */
 }
 
 .step-indicator .active p {
     color: #745C44;
     font-weight: bold;
 }
+
+/* NEW/UPDATED CSS for the connecting line */
+.step-line {
+    flex-grow: 1;
+    /* This makes the line take up all available space between steps */
+    height: 3px;
+    background-color: #745C44;
+    margin: 0 10px;
+    margin-top: -2%;
+    /* Add some small margin to separate from the circles */
+    /* Ensure the line's center aligns with the circles' center if needed */
+    align-self: center;
+    /* Vertically center the line within the flex container */
+}
+
+
+/* Your Media Queries (adjust as needed based on the new flex setup) */
+@media (max-width: 1023px) {
+    .step-indicator ul {
+        width: 85%;
+        /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 867px) {
+    .step-indicator ul {
+        width: 95%;
+        /* Wider for smaller screens */
+    }
+
+    .step-indicator .step-number {
+        width: 55px;
+        height: 55px;
+        font-size: 30px;
+    }
+
+    .step-indicator li p {
+        font-size: 13px;
+    }
+
+    .step-line {
+        margin: 0 8px;
+        margin-top: -2%;
+    }
+}
+
+@media (max-width: 578px) {
+    .step-indicator ul {
+        width: 98%;
+        /* Even wider */
+    }
+
+    .step-indicator .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+
+    .step-indicator li p {
+        font-size: 11px;
+    }
+
+    .step-line {
+        margin: 0 5px;
+        margin-top: -2%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* For very small screens, vertical stacking is usually best */
+    .step-indicator ul {
+        flex-direction: column;
+        /* Stack steps vertically */
+        align-items: flex-start;
+        /* Align stacked items to the left */
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    .step-line {
+        display: none;
+        /* Hide horizontal lines when stacked */
+    }
+
+    .step-indicator li {
+        width: 100%;
+        /* Make each step take full width when stacked */
+        margin-bottom: 20px;
+        /* Add vertical spacing between stacked steps */
+        flex-direction: row;
+        /* Align number and text horizontally */
+        justify-content: flex-start;
+    }
+
+    .step-indicator li p {
+        margin-top: 3%;
+        margin-left: 15px;
+        /* Space between number and text when horizontal */
+        text-align: left;
+        font-size: 20px;
+    }
+}
+
 
 .form-container {
     background-color: white;
@@ -171,7 +274,7 @@ form .button {
     text-align: center;
 }
 
-.button-container{
+.button-container {
     display: flex;
     margin-top: 2%;
     width: 100%;
@@ -183,7 +286,7 @@ form .button:hover {
     background: #6d350d;
 }
 
-.button .bi-arrow-right{
+.button .bi-arrow-right {
     margin-left: 2%;
     /* justify-content: center;
     align-items: center;
@@ -215,183 +318,94 @@ form .button:hover {
     }
 }
 
-@media(max-width: 459px) {
-    .form-container .form-content .category {
-        flex-direction: column;
-    }
-}
-
-/* --- Additional Responsive CSS --- */
-
-/* Responsive adjustments for the Process Bar */
-@media (max-width: 1023px) {
-    .step-indicator ul {
-        width: 100%;
-        /* Adjust width for medium screens */
-    }
-
-    .step-indicator li:not(:last-child)::after {
-        width: 150%;
-        /* Slightly reduce line width for smaller screens */
-        left: calc(150% + 5px);
-        /* Reduce gap between number and line */
-    }
-
-    .step-indicator li:not(:last-child) {
-        margin-right: 110px;
-        /* Adjust margin to match new line width + gap */
-    }
-}
-
-@media (max-width: 867px) and (min-width: 578px){
-    .step-indicator ul {
-        width: 70%;
-        /* Wider for smaller screens to maximize space */
-        justify-content: space-between;
-        /* Ensure good distribution */
-    }
-
-    .step-indicator li:not(:last-child)::after {
-        width: 150%;
-        /* Further reduce line width */
-        left: calc(150% + 5px);
-        /* Keep small gap */
-    }
-
-    .step-indicator li:not(:last-child) {
-        margin-right: 70px;
-        /* Adjust margin to match new line width + gap */
-    }
-
-    /* Adjust font size for the step numbers on very small screens */
-    .step-indicator .step-number {
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        top: 25px;
-        /* Adjust top for smaller circle */
-    }
-
-    /* Adjust the text below the numbers */
-    .step-indicator li p {
-        font-size: 14px;
-        /* Smaller font size for labels */
-        margin-top: 10px;
-        /* Adjust margin-top for closer text */
-    }
-
-    /* Adjust the line's vertical position for smaller circles */
-    .step-indicator li:not(:last-child)::after {
-        top: 25px;
-        /* Half of 50px diameter */
-    }
-}
-
-@media (max-width: 500px) {
-    .step-indicator ul {
-        flex-wrap: wrap;
-        /* Allow steps to wrap to the next line if too narrow */
-        justify-content: center;
-        /* Center steps when wrapped */
-        gap: 20px 0;
-        /* Add vertical gap when wrapped */
-    }
-
-    .step-indicator li {
-        width: 45%;
-        /* Allow two items per row */
-        margin-right: 0 !important;
-        /* Reset margin-right for wrapped items */
-    }
-
-    /* Hide the lines completely if steps wrap, or re-think their positioning */
-    .step-indicator li:not(:last-child)::after {
-        display: none;
-        /* Hide lines if steps are wrapping unpredictably */
-    }
-
-    /* If you still want lines when wrapped, you'd need a more complex grid/flex setup */
-}
-
-
-/* --- Updated Responsive CSS for Form Container and Form Fields --- */
-
-/* Adjustments for tablets and smaller desktops (around 768px to 1023px) */
 @media (max-width: 1023px) {
     .form-container {
-        margin: 5% 10%; /* Slightly reduce horizontal margin */
-        padding: 3%; /* Adjust padding */
+        margin: 5% 10%;
+        /* Slightly reduce horizontal margin */
+        padding: 3%;
+        /* Adjust padding */
     }
 
     /* Adjust the input box width for better distribution on slightly smaller screens */
     form .user-details .input-box {
-        width: calc(100% / 2 - 15px); /* Slightly less gap between two columns */
+        width: calc(100% / 2 - 15px);
+        /* Slightly less gap between two columns */
+    }
+
+    form .button {
+        font-size: 20px;
+        width: 100%;
     }
 }
 
 /* Adjustments for typical mobile devices (up to 767px) */
 @media (max-width: 767px) {
     .form-container {
-        margin: 5% 5%; /* Significantly reduce horizontal margin */
-        padding: 5%; /* Increase padding for better internal spacing */
+        margin: 5% 5%;
+        /* Significantly reduce horizontal margin */
+        padding: 5%;
+        /* Increase padding for better internal spacing */
     }
 
     form .user-details .input-box {
-        width: 100%; /* Make input boxes take full width, stacking vertically */
-        margin-bottom: 15px; /* Ensure consistent vertical spacing */
+        width: 100%;
+        /* Make input boxes take full width, stacking vertically */
+        margin-bottom: 15px;
+        /* Ensure consistent vertical spacing */
     }
 
     .user-details .input-box select {
-        width: 103%; /* Ensure select also takes full width */
-    }
-
-    form .category {
-        flex-direction: column; /* Stack gender/category options vertically */
-        align-items: flex-start; /* Align stacked items to the left */
-        width: 100%; /* Ensure category container uses full width */
-        margin: 10px 0; /* Adjust margin for stacked categories */
-    }
-
-    form .category label {
-        margin-bottom: 8px; /* Add vertical space between stacked radio buttons */
+        width: 100%;
+        /* Ensure select also takes full width */
     }
 
     .form-content form .user-details {
-        max-height: none; /* Remove max-height and overflow for better flow on small screens */
-        overflow-y: visible; /* Prevent unnecessary scrollbars unless content truly overflows */
+        max-height: none;
+        /* Remove max-height and overflow for better flow on small screens */
+        overflow-y: visible;
+        /* Prevent unnecessary scrollbars unless content truly overflows */
     }
 
     .user-details::-webkit-scrollbar {
-        width: 0; /* Hide scrollbar if overflow is removed */
+        width: 0;
+        /* Hide scrollbar if overflow is removed */
+    }
+
+    form .button {
+        font-size: 20px;
+        width: 100%;
     }
 }
 
 /* Further adjustments for very small mobile devices (up to 480px) */
 @media (max-width: 480px) {
     .form-container {
-        margin: 5% 2%; /* Even smaller horizontal margin for very narrow screens */
-        padding: 6%; /* Slightly more padding for internal comfort */
+        margin: 5% 2%;
+        /* Even smaller horizontal margin for very narrow screens */
+        padding: 6%;
+        /* Slightly more padding for internal comfort */
     }
 
     form .input-box span.details {
-        font-size: 18px; /* Slightly reduce font size for labels */
-        margin-bottom: 5px; /* Reduce space below labels */
+        font-size: 18px;
+        /* Slightly reduce font size for labels */
+        margin-bottom: 5px;
+        /* Reduce space below labels */
     }
 
     .user-details .input-box input,
     .user-details .input-box select {
-        height: 40px; /* Slightly reduce height of input fields */
-        font-size: 15px; /* Smaller font size for input text */
-        padding-left: 10px; /* Adjust padding */
+        height: 40px;
+        /* Slightly reduce height of input fields */
+        font-size: 15px;
+        /* Smaller font size for input text */
+        padding-left: 10px;
+        /* Adjust padding */
     }
 
     form .button {
-        height: 40px; /* Smaller button height */
-        margin: 25px 0; /* Adjust button margin */
-    }
-
-    form .button input {
-        font-size: 16px; /* Smaller font for button text */
+        font-size: 20px;
+        width: 100%;
     }
 }
 
@@ -400,6 +414,7 @@ form .button:hover {
     body h1 {
         font-size: 40px;
     }
+
     body p {
         font-size: 18px;
     }
@@ -409,6 +424,7 @@ form .button:hover {
     body h1 {
         font-size: 32px;
     }
+
     body p {
         font-size: 16px;
     }

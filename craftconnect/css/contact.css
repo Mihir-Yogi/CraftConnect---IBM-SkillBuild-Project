@@ -158,16 +158,20 @@ form .button input:hover {
     padding: 5px 15px;
 }
 
-.follow-us .bi-instagram,
-.follow-us .bi-facebook,
-.follow-us .bi-twitter-x,
-.follow-us .bi-pinterest {
-    padding: 10px 15px;
-    background-color: #9c6b3e;
-    border-radius: 50%;
+.contact-info h2{
+    margin-bottom: 5%;
+}
+
+.contact-info .bi-pin-map-fill,
+.contact-info .bi-telephone-fill,
+.contact-info .bi-envelope,
+.contact-info .bi-clock {
     color: white;
     font-size: 30px;
-    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #745C44;
+    padding: 10px 15px;;
+    margin: 80%; /* This margin might need adjustment for smaller screens */
 }
 
 .info-grid {
@@ -280,17 +284,23 @@ form .button input:hover {
 .follow-us .bi-facebook,
 .follow-us .bi-twitter-x,
 .follow-us .bi-pinterest {
-    font-size: 40px;
-    margin-right: 3%;
-    background-color: #745C44;
-    border-radius: 55%;
-    padding: 10px;
+    padding: 10px 15px;
+    background-color: #9c6b3e;
+    border-radius: 50%;
     color: white;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.follow-us h2{
+    margin-bottom: 20px;
 }
 
 .follow-us p {
     text-align: left;
     font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .map {
