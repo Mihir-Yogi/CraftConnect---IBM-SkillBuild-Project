@@ -151,7 +151,7 @@ input {
 }
 
 .Nav-effect:hover::after {
-    width: 100%;
+    width: 90%;
 }
 
 .Nav-effect:hover {
@@ -159,7 +159,7 @@ input {
 }
 
 .Nav-effect.active::after {
-    width: 100%;
+    width: 90%;
 }
 
 
