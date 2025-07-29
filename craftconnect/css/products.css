@@ -6,7 +6,7 @@ body p {
 
 body h1 {
     font-size: 60px;
-    margin-top: 2%;
+    margin-top: 7%;
 }
 
 body p {
@@ -39,13 +39,7 @@ body p {
     width: 100%;
 }
 
-.apply-filter {
-    pointer-events: none;
-    user-select: none;
-    cursor: pointer;
-}
-
-.filter-item input {
+.filter-item input, .apply-filter {
     /* border-color: #745C44; */
     border-radius: 10px;
     padding: 10px;
@@ -68,8 +62,6 @@ body p {
     border: 1px solid #6b4423;
     text-align: center;
     cursor: pointer;
-    pointer-events: none;
-    user-select: none;
 }
 
 @media (max-width: 768px) {
