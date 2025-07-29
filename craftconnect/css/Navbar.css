@@ -194,7 +194,7 @@ p, button, span, input{
 }
 
 /* responsive layout */
-@media(max-width:765px) {
+@media(max-width:965px) {
     .nav-links {
         display: none;
     }
@@ -213,7 +213,7 @@ p, button, span, input{
 }
 
 
-@media(max-width:640px) and (min-width:768px) {
+@media(max-width:600px) and (min-width:768px) {
     .navbar-container {
         padding: 0 16px;
     }

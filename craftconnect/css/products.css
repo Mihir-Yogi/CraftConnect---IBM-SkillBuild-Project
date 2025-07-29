@@ -39,6 +39,12 @@ body p {
     width: 100%;
 }
 
+.apply-filter {
+    pointer-events: none;
+    user-select: none;
+    cursor: pointer;
+}
+
 .filter-item input {
     /* border-color: #745C44; */
     border-radius: 10px;
@@ -52,7 +58,7 @@ body p {
     cursor: pointer;
 }
 
-.filter-item .clear-all{
+.filter-item .clear-all {
     border-radius: 10px;
     padding: 10px;
     background-color: transparent;
@@ -62,6 +68,8 @@ body p {
     border: 1px solid #6b4423;
     text-align: center;
     cursor: pointer;
+    pointer-events: none;
+    user-select: none;
 }
 
 @media (max-width: 768px) {
@@ -126,11 +134,17 @@ body p {
     cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
     transition: border 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
 
 .card .card-img {
     border-radius: 16px 16px 0px 0px;
