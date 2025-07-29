@@ -39,7 +39,7 @@ body p {
     width: 100%;
 }
 
-.filter-item input, .apply-filter {
+.apply-filter {
     /* border-color: #745C44; */
     border-radius: 10px;
     padding: 10px;
@@ -52,6 +52,12 @@ body p {
     cursor: pointer;
 }
 
+.apply-filter:hover {
+    background-color: transparent;
+    color: #6b4423;
+    border: 1px solid #6b4423;
+}
+
 .filter-item .clear-all {
     border-radius: 10px;
     padding: 10px;
@@ -62,6 +68,11 @@ body p {
     border: 1px solid #6b4423;
     text-align: center;
     cursor: pointer;
+}
+
+.filter-item .clear-all:hover {
+    background-color: #6b4423;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -201,9 +212,11 @@ body p {
 }
 
 .pagination .page-link {
-    color: #745C44; /* Primary text color */
+    color: #745C44;
+    /* Primary text color */
     border: 1px solid #745C44;
-    background-color: #FCFAF2; /* Background */
+    background-color: #FCFAF2;
+    /* Background */
     font-weight: 500;
 }
 
@@ -214,6 +227,7 @@ body p {
 }
 
 .pagination .page-link:hover {
-    background-color: #E8E1D2; /* Soft hover color */
+    background-color: #E8E1D2;
+    /* Soft hover color */
     color: #745C44;
 }
