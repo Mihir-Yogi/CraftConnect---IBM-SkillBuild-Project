@@ -5,6 +5,18 @@
     color: #3a2d1b;
 } */
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-icon {
+  height: 24px; /* adjust to match your design */
+  width: 24px;
+}
 .about-section {
     width: 90%;
     margin: auto;
