@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="/craftconnect/assets/Imgs/download.png" type="image/svg+xml">
 </head>
 
 <div>
@@ -95,13 +96,13 @@
         <h1>Your Craft & Experience</h1>
         <p>Share your expertise and connect with customers through your story </p>
         <div class="form-content">
-            <form>
+            <form action="artistans3.html">
                 <!-- Full Name Field -->
                 <div class="form-group">
                     <label for="fullName" class="form-label">Full Name *</label>
                     <div class="form-input-wrapper">
                         <input type="text" id="fullName" name="fullName" placeholder="Enter Your Full Name"
-                            class="form-input">
+                            class="form-input" required>
                     </div>
                 </div>
 
@@ -109,7 +110,7 @@
                 <div class="form-group">
                     <label for="yearsOfExperience" class="form-label">Years Of Experience *</label>
                     <input type="text" id="yearsOfExperience" name="yearsOfExperience"
-                        placeholder="How many years have you been practicing your craft ?" class="form-input">
+                        placeholder="How many years have you been practicing your craft ?" class="form-input" required>
                 </div>
 
                 <!-- Your Story Field -->
@@ -117,7 +118,7 @@
                     <label for="yourStory" class="form-label">Your Story *</label>
                     <textarea id="yourStory" name="yourStory" rows="6"
                         placeholder="Minimum 50 characters. This helps customer connects with you and your craft."
-                        class="form-textarea"></textarea>
+                        class="form-textarea" required></textarea>
                 </div>
 
                 <!-- Social Media Handles -->
@@ -130,7 +131,7 @@
                                 <span style="font-size: 14px;">@</span>
                             </div>
                             <input type="text" id="instagramHandle" name="instagramHandle" placeholder="username"
-                                class="form-input with-at-prefix">
+                                class="form-input with-at-prefix" required>
                         </div>
                     </div>
 
@@ -147,7 +148,7 @@
                                 </svg>
                             </div>
                             <input type="text" id="facebookPage" name="facebookPage" placeholder="profile url"
-                                class="form-input with-left-icon">
+                                class="form-input with-left-icon" required>
                         </div>
                     </div>
 
@@ -160,7 +161,7 @@
                                 <i class="bi bi-globe-central-south-asia"></i>
                             </div>
                             <input type="url" id="websiteUrl" name="websiteUrl"
-                                placeholder="https://www.yourwebsite.com" class="form-input with-left-icon">
+                                placeholder="https://www.yourwebsite.com" class="form-input with-left-icon" required>
                         </div>
                     </div>
                 </div>
@@ -177,9 +178,7 @@
                             </svg>
                             Back
                         </a>
-                        <a href="artistans3.html" class="form-button create-profile-button">
-                            Create My Profile
-                        </a>
+                        <input type="submit" value="Create My Profile" class="form-button create-profile-button">
                     </div>
                 </div>
             </form>

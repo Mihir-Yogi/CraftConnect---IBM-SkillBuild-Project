@@ -226,7 +226,7 @@ form .input-box span.details {
 }
 
 .user-details .input-box input,
-.user-details .input-box select {
+.user-details .input-box select, .custom-file-upload {
     height: 45px;
     width: 100%;
     outline: none;
@@ -239,6 +239,7 @@ form .input-box span.details {
     color: #745C4480;
 
 }
+
 
 .user-details .input-box select {
     width: 100%;
@@ -260,10 +261,6 @@ form .button {
     height: 100%;
     width: 50%;
     border-radius: 5px;
-    border: none;
-    color: #fff;
-    font-size: 23px;
-    font-weight: 500;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -272,8 +269,79 @@ form .button {
     margin: 2% 1%;
     text-decoration: none;
     text-align: center;
+    justify-self: center;
 }
 
+form input[type="submit"]{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* --- Adjustments for File Upload and Form Inputs --- */
+
+/* Hide the default file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Base styles for all regular text inputs and selects */
+.user-details .input-box input:not([type="submit"]), /* Exclude the submit button */
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #745C44;
+    transition: all 0.3s ease;
+    background-color: #FCFAF2;
+    color: #745C4480; /* This applies to placeholder/default text */
+}
+
+/* Focus and Valid states for regular inputs/selects */
+.user-details .input-box input:not([type="submit"]):focus,
+.user-details .input-box input:not([type="submit"]):valid,
+.user-details .input-box select:focus,
+.user-details .input-box select:valid {
+    border-color: #745C44;
+    background-color: #FCFAF2;
+    color: #745C44;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center; 
+    height: 45px;
+    width: 100%;
+    cursor: pointer;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 0 15px; 
+    box-sizing: border-box;
+    border:  1px solid #745C44;
+}
+
+@media (max-width: 480px) {
+    .custom-file-upload {
+        height: 40px; 
+        font-size: 15px; 
+        padding: 0 10px; 
+    }
+}
+
+.button .bi-arrow-right{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 1%;
+}
 .button-container {
     display: flex;
     margin-top: 2%;
@@ -282,15 +350,11 @@ form .button {
 }
 
 form .button:hover {
-    /* transform: scale(0.99); */
     background: #6d350d;
 }
 
 .button .bi-arrow-right {
     margin-left: 2%;
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
 }
 
 
@@ -321,15 +385,11 @@ form .button:hover {
 @media (max-width: 1023px) {
     .form-container {
         margin: 5% 10%;
-        /* Slightly reduce horizontal margin */
         padding: 3%;
-        /* Adjust padding */
     }
 
-    /* Adjust the input box width for better distribution on slightly smaller screens */
     form .user-details .input-box {
         width: calc(100% / 2 - 15px);
-        /* Slightly less gap between two columns */
     }
 
     form .button {
@@ -338,37 +398,28 @@ form .button:hover {
     }
 }
 
-/* Adjustments for typical mobile devices (up to 767px) */
 @media (max-width: 767px) {
     .form-container {
         margin: 5% 5%;
-        /* Significantly reduce horizontal margin */
         padding: 5%;
-        /* Increase padding for better internal spacing */
     }
 
     form .user-details .input-box {
         width: 100%;
-        /* Make input boxes take full width, stacking vertically */
         margin-bottom: 15px;
-        /* Ensure consistent vertical spacing */
     }
 
     .user-details .input-box select {
         width: 100%;
-        /* Ensure select also takes full width */
     }
 
     .form-content form .user-details {
         max-height: none;
-        /* Remove max-height and overflow for better flow on small screens */
         overflow-y: visible;
-        /* Prevent unnecessary scrollbars unless content truly overflows */
     }
 
     .user-details::-webkit-scrollbar {
         width: 0;
-        /* Hide scrollbar if overflow is removed */
     }
 
     form .button {
@@ -377,30 +428,22 @@ form .button:hover {
     }
 }
 
-/* Further adjustments for very small mobile devices (up to 480px) */
 @media (max-width: 480px) {
     .form-container {
         margin: 5% 2%;
-        /* Even smaller horizontal margin for very narrow screens */
         padding: 6%;
-        /* Slightly more padding for internal comfort */
     }
 
     form .input-box span.details {
         font-size: 18px;
-        /* Slightly reduce font size for labels */
         margin-bottom: 5px;
-        /* Reduce space below labels */
     }
 
     .user-details .input-box input,
     .user-details .input-box select {
         height: 40px;
-        /* Slightly reduce height of input fields */
         font-size: 15px;
-        /* Smaller font size for input text */
         padding-left: 10px;
-        /* Adjust padding */
     }
 
     form .button {
@@ -409,7 +452,6 @@ form .button:hover {
     }
 }
 
-/* Ensure global h1 and p are responsive for content outside form */
 @media (max-width: 767px) {
     body h1 {
         font-size: 40px;
