@@ -9,27 +9,51 @@ body {
     background-color: #FCFAF2;
 }
 
-h1, h2, h3, h4, h5, h6, label{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
     font-family: "Playfair Display", serif;
 }
 
-p, button, span, input{
+p,
+button,
+span,
+input {
     font-family: "Inter", sans-serif;
 }
+
 .navbar {
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 50;
 
-    background: rgba(0, 0, 0, 0.133); 
-    backdrop-filter: blur(12px);          
-    -webkit-backdrop-filter: blur(12px);  
+    background: rgba(0, 0, 0, 0.133);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.112); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.112);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* space between icon and text */
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon {
+    height: 24px;
+    /* adjust to match your design */
+    width: 24px;
+}
 
 .navbar-container {
     max-width: 1280px;
@@ -58,7 +82,7 @@ p, button, span, input{
 }
 
 .logo-text {
-    color: #5C4A38 ;
+    color: #5C4A38;
     font-size: 25px;
     font-weight: 600;
     letter-spacing: 0.025em;
@@ -79,7 +103,7 @@ p, button, span, input{
 }
 
 .nav-links a {
-    color: #5C4A38 ;
+    color: #5C4A38;
     text-decoration: none;
     padding: 8px 12px;
     font-size: 20px;
@@ -89,18 +113,53 @@ p, button, span, input{
 
 }
 
-.nav-links .active a, .nav-links .active i{
-    color: rgba(255, 255, 255, 0.8);;
-    /* background-color: white; */
+.nav-links .active a,
+.nav-links .active i {
+    color: rgba(218, 136, 54, 0.933);
+    /* /* background-color: white; */
 }
 
-.nav-links i{
+.nav-links i {
     color: #5C4A38;
 }
 
-.nav-links a:hover, .nav-links i:hover {
-    color: rgba(255, 255, 255, 0.8);;
+.nav-links a:hover,
+.nav-links i:hover {
+    color: rgba(218, 136, 54, 0.933);
 
+}
+
+.Nav-effect {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.Nav-effect::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.4s ease-in-out;
+}
+
+.Nav-effect:hover::after {
+    width: 100%;
+}
+
+.Nav-effect:hover {
+    color: #ffffff;
+}
+
+.Nav-effect.active::after {
+    width: 100%;
 }
 
 
@@ -160,15 +219,16 @@ p, button, span, input{
     transition: color 0.2s ease;
 }
 
-.mobile-nav .active{
+.mobile-nav .active {
     color: white;
 }
 
-.mobile-nav hr{
+.mobile-nav hr {
     margin-top: 2%;
 }
 
-.mobile-nav a:hover , .mobile-nav i:hover {
+.mobile-nav a:hover,
+.mobile-nav i:hover {
     color: white;
 }
 
