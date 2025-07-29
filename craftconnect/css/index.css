@@ -853,9 +853,8 @@ html {
         padding-right: 7%; /* Reduce right padding to give more space for content */
         padding-left: 7%;
         justify-content: center; /* Center content on smaller screens */
-        text-align: center;
+        text-align: left;
         background-position: top center; /* Adjust background position */
-        background-size: 120%; /* Slightly zoom in background for better visibility */
     }
     .content-wrapper h1 {
         font-size: 55px;
@@ -870,6 +869,7 @@ html {
         padding: 10px 20px;
     }
     .image-stack {
+        margin-top: 5%;
         flex-direction: column;
         align-items: center;
         gap: 15px;
@@ -983,7 +983,7 @@ html {
     .main-content {
         padding-right: 5%;
         padding-left: 5%;
-        background-size: 130%;
+        /* background-size: 130%; */
     }
     .content-wrapper h1 {
         font-size: 45px;
