@@ -115,8 +115,8 @@ input {
 
 .nav-links .active a,
 .nav-links .active i {
-    /* color: rgba(218, 136, 54, 0.933); */
-    color: #6b5035;
+    color: rgba(218, 136, 54, 0.933);
+    /* color: #6b5035; */
     /* /* background-color: white; */
 }
 
@@ -126,7 +126,8 @@ input {
 
 .nav-links a:hover,
 .nav-links i:hover {
-    color: #6b5035;
+    /* color: #6b5035; */
+    color: rgba(218, 136, 54, 0.933);
 
 }
 
