@@ -201,3 +201,27 @@ body p {
     margin-right: 5%;
     margin-top: 4%;
 }
+
+
+.pagination-container {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.pagination .page-link {
+    color: #745C44; /* Primary text color */
+    border: 1px solid #745C44;
+    background-color: #FCFAF2; /* Background */
+    font-weight: 500;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #745C44;
+    border-color: #745C44;
+    color: #FCFAF2;
+}
+
+.pagination .page-link:hover {
+    background-color: #E8E1D2; /* Soft hover color */
+    color: #745C44;
+}
