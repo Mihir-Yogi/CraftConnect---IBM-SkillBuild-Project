@@ -110,6 +110,7 @@ html {
     /* pill-like shape for elegance */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 /* Hover animation */
@@ -323,7 +324,7 @@ html {
     .main-content {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
         text-align: left;
     }
 }
@@ -550,9 +551,9 @@ html {
     text-decoration: none;
 }
 
-.newProducts .card-container {
+/* .newProducts .card-container {
     margin: 3%;
-}
+} */
 
 .card:hover {
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
@@ -734,20 +735,434 @@ html {
     font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .row-reviews {
-        margin: 2%;
-    }
 
-    .column-reviews {
+/* --- Responsive Media Queries --- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .content-wrapper h1 {
+        font-size: 80px;
+    }
+    .content-wrapper p {
+        font-size: 24px;
+    }
+    .main-content {
+        padding-right: 40%;
+        animation: none;
+    }
+    .column-detials {
         width: 100%;
-        margin: 0;
+        display: block;
+        margin-bottom: 20px;
     }
 }
 
-@media screen and (max-width: 600px) {
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px){
+    .content-wrapper h1 {
+        font-size: 60px;
+    }
+    .content-wrapper p {
+        font-size: 20px;
+    }
+    .main-content {
+        padding-right: 35%;
+    }
+    .image-stack img {
+        width: 120px;
+        height: 120px;
+    }
+    .image-stack .p1 {
+        width: 60px;
+        height: 60px;
+    }
+    .image-stack .p3 {
+        width: 80px;
+        height: 79px;
+    }
+    .products h1 {
+        font-size: 40px;
+    }
+    .products p {
+        font-size: 22px;
+    }
+    .newProducts h1 {
+        font-size: 40px;
+    }
+    .card-detials h2{
+        font-size: 20px;
+    }
+    .card-detials p{
+        font-size: 10px;
+    }
+    .column-details {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .row-reviews {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 2%;
+        margin-top: 10%;
+    }
     .column-reviews {
         width: 100%;
-        margin: 0;
+        /* flex: none; */
+        transform: scale(1) !important; /* Disable scaling for stacked cards */
+        /* opacity: 1 !important; */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important; /* Consistent shadow */
+        margin-bottom: 15px;
+    }
+    .column-reviews:nth-child(2) {
+        transform: scale(1) !important; /* Override default scaling */
+    }
+    /* Disable hover effects for reviews on smaller screens when stacked */
+    .column-reviews:hover {
+        transform: scale(1.2) !important;
+    }
+    .row-reviews:hover .column-reviews:not(:hover) {
+        transform: scale(1) !important;
+    }
+    .card-reviews:hover {
+        scale: 105%; /* Disable card hover scale */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+    .card-reviews p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1500px){
+    .column-details {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .row-reviews {
+        flex-direction: column; /* Stack reviews vertically */
+        align-items: center;
+        gap: 15px;
+        margin: 2%;
+        margin-top: 10%;
+    }
+    .column-reviews {
+        max-width: 90%; /* Take more width when stacked */
+        transform: scale(1) !important; /* Disable scaling for stacked cards */
+        opacity: 1 !important; /* Ensure full opacity */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important; /* Consistent shadow */
+        margin-bottom: 15px;
+    }
+    .column-reviews:nth-child(2) {
+        transform: scale(1.05) !important; /* Override default scaling */
+    }
+    /* Disable hover effects for reviews on smaller screens when stacked */
+    .column-reviews:hover {
+        transform: scale(1.1) !important;
+        z-index: auto !important;
+    }
+    .row-reviews:hover .column-reviews:not(:hover) {
+        transform: scale(1) !important;
+        opacity: 1 !important;
+    }
+    .card-reviews:hover {
+        scale: 100%; /* Disable card hover scale */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+    .card-reviews p {
+        font-size: 18px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .main-content {
+        padding-right: 7%; /* Reduce right padding to give more space for content */
+        padding-left: 7%;
+        justify-content: center; /* Center content on smaller screens */
+        text-align: left;
+        background-position: top center; /* Adjust background position */
+    }
+    .content-wrapper h1 {
+        font-size: 55px;
+        line-height: 1.2;
+    }
+    .content-wrapper p {
+        font-size: 18px;
+        margin-right: 0;
+    }
+    .content-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .image-stack {
+        margin-top: 5%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .image-stack img {
+        width: 100px;
+        height: 100px;
+    }
+    .image-stack .p1 {
+        width: 50px;
+        height: 50px;
+    }
+    .image-stack .p3 {
+        width: 70px;
+        height: 69px;
+    }
+    .products h1 {
+        font-size: 35px;
+    }
+    .products p {
+        font-size: 18px;
+    }
+    /* .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    } */
+    .card-content h2, .card-content h3, .card-content .card-user {
+        font-size: 20px;
+    }
+    /* .card-btn {
+        margin-left: 0;
+        width: 80%;
+        padding: 3% 5%;
+    } */
+    .view-products {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .column {
+        flex: 0 0 100%; /* On screens up to 768px, each column takes full width */
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .overlay-text h1 {
+        font-size: 60px;
+    }
+    .overlay-text {
+        padding: 8px 10px;
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+    }
+    .img-btn {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    .column:nth-child(2) img {
+        margin-top: 10px; /* Ensure a consistent gap between stacked images */
+    }
+    .column:nth-child(2) img:first-of-type {
+        margin-top: 0;
+    }
+    .newProducts h1 {
+        font-size: 35px;
+    }
+    /* .newProducts .explore-btn {
+        font-size: 16px;
+        padding: 1% 4%;
+    } */
+    .column-details {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .row-reviews {
+        flex-direction: column; /* Stack reviews vertically */
+        align-items: center;
+        gap: 15px;
+        margin: 2%;
+        margin-top: 10%;
+    }
+    .column-reviews {
+        max-width: 90%; /* Take more width when stacked */
+        transform: scale(1) !important; /* Disable scaling for stacked cards */
+        opacity: 1 !important; /* Ensure full opacity */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important; /* Consistent shadow */
+        margin-bottom: 15px;
+    }
+    .column-reviews:nth-child(2) {
+        transform: scale(1.05) !important; /* Override default scaling */
+    }
+    /* Disable hover effects for reviews on smaller screens when stacked */
+    .column-reviews:hover {
+        transform: scale(1.1) !important;
+        z-index: auto !important;
+    }
+    .row-reviews:hover .column-reviews:not(:hover) {
+        transform: scale(1) !important;
+        opacity: 1 !important;
+    }
+    .card-reviews:hover {
+        scale: 100%; /* Disable card hover scale */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+    .card-reviews p {
+        font-size: 18px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .main-content {
+        padding-right: 5%;
+        padding-left: 5%;
+        /* background-size: 130%; */
+    }
+    .content-wrapper h1 {
+        font-size: 45px;
+    }
+    .content-wrapper p {
+        font-size: 16px;
+    }
+    .content-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .image-stack img {
+        width: 80px;
+        height: 80px;
+    }
+    .image-stack .p1 {
+        width: 40px;
+        height: 40px;
+    }
+    .image-stack .p3 {
+        width: 60px;
+        height: 59px;
+    }
+    .products h1 {
+        font-size: 30px;
+    }
+    .products p {
+        font-size: 16px;
+    }
+    .card-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    .card-content h2, .card-content h3, .card-content .card-user {
+        font-size: 18px;
+    }
+    .card-btn {
+        font-size: 14px;
+        padding: 4% 8%;
+    }
+    .view-products {
+        font-size: 18px;
+        padding: 8px 18px;
+    }
+    .overlay-text h1 {
+        font-size: 45px;
+    }
+    .img-btn {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+    .newProducts h1 {
+        font-size: 30px;
+    }
+    .newProducts .explore-btn {
+        font-size: 14px;
+        padding: 1.5% 5%;
+    }
+    .details h1 {
+        font-size: 35px;
+    }
+    .details p {
+        font-size: 18px;
+    }
+    .bi-suit-heart-fill, .bi-leaf-fill, .bi-people-fill {
+        font-size: 40px;
+    }
+    .column-reviews {
+        max-width: 95%;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 480px) {
+    .main-content {
+        padding-right: 3%;
+        padding-left: 3%;
+        background-size: 140%;
+    }
+    .content-wrapper h1 {
+        font-size: 38px;
+    }
+    .content-wrapper p {
+        font-size: 14px;
+    }
+    .content-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .image-stack img {
+        width: 70px;
+        height: 70px;
+    }
+    .image-stack .p1 {
+        width: 35px;
+        height: 35px;
+    }
+    .image-stack .p3 {
+        width: 50px;
+        height: 49px;
+    }
+    .image-stack figcaption {
+        font-size: 12px;
+    }
+    .products h1 {
+        font-size: 28px;
+    }
+    .products p {
+        font-size: 14px;
+    }
+    .card-content h2, .card-content h3, .card-content .card-user {
+        font-size: 16px;
+    }
+    .card-btn {
+        font-size: 12px;
+        padding: 5% 10%;
+    }
+    .view-products {
+        font-size: 16px;
+        padding: 6px 14px;
+    }
+    .overlay-text h1 {
+        font-size: 35px;
+    }
+    .img-btn {
+        font-size: 0.7em;
+        padding: 4px 8px;
+    }
+    .newProducts h1 {
+        font-size: 28px;
+    }
+    .newProducts .explore-btn {
+        font-size: 12px;
+        padding: 2% 6%;
+    }
+    .details h1 {
+        font-size: 30px;
+    }
+    .details p {
+        font-size: 16px;
+    }
+    .bi-suit-heart-fill, .bi-leaf-fill, .bi-people-fill {
+        font-size: 35px;
+    }
+    .card-details {
+        padding: 2%;
+        margin: 2%;
+    }
+    .card-reviews p {
+        font-size: 16px;
+    }
+    .bi-star-fill {
+        font-size: 20px;
     }
 }
