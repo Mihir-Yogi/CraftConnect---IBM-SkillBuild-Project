@@ -83,7 +83,9 @@ body p {
         /* Adjust margin for smaller screens */
         gap: 15px;
     }
-
+    .main h1{
+        margin-top: 91px;
+    }
     .filter-item .p-none {
         margin-top: 2%;
         display: none;
