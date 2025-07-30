@@ -140,6 +140,7 @@ input {
   .container {
     padding: 32px 24px;
     margin: 16px;
+    margin-top: 90px;
   }
 
   .container h1 {
@@ -161,6 +162,7 @@ input {
     width: 80%;
     margin: 5% auto;
   }
+  
 }
 
 .footer-bottom p {
