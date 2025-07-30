@@ -70,14 +70,22 @@
 .fav-page-button:hover {
     background-color: #6f3610;
 }
+
 @media (max-width: 500px) {
-  .fav-page-button {
-    width: 100%; /* or 90% if you want it wider */
-    margin: 0 auto; /* center the button */
-    display: block; /* make sure it behaves like a block */
-    text-align: center;
-    justify-content: center;
-  }
+    .fav-page-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        width: 100%;
+        margin: 10px auto;
+        text-decoration: none;
+        color: white;
+        background-color: #7a3e1d;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
 }
 
 
