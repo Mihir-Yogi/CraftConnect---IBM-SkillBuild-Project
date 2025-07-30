@@ -873,7 +873,7 @@ html {
     }
     .image-stack {
         margin-top: 5%;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 15px;
     }
