@@ -715,6 +715,7 @@ html {
 @media (max-width: 1200px) {
     .content-wrapper h1 {
         font-size: 80px;
+        line-height: 5.7rem;
     }
     .content-wrapper p {
         font-size: 24px;
@@ -734,6 +735,7 @@ html {
 @media (max-width: 992px){
     .content-wrapper h1 {
         font-size: 60px;
+        line-height: 4.7rem;
     }
     .content-wrapper p {
         font-size: 20px;
