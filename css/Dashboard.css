@@ -118,6 +118,21 @@ p.subheading {
         width: 100%;
         /* Take full width */
     }
+    .card{
+        padding: 20px;
+    }
+    .card h2{
+        font-size: 25px;
+    }
+    .card .products-empty h3{
+        font-size: 25px;
+    }
+    .card .products-empty p{
+        font-size: 15px;
+    }
+    .card .products-empty i{
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 480px) {
