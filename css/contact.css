@@ -303,24 +303,92 @@ form .button input:hover {
 
 /* For screens even smaller, like typical mobile phones (e.g., < 480px) */
 @media (max-width: 480px) {
-    .contact-form h2{
-        font-size: 10px;
+    .main h1{
+        font-size: 40px;
     }
-    .contact-info {
+    .main p{
+        font-size: 20px;
         padding: 10px;
     }
+    .contact-form h2{
+        font-size: 40px;
+        margin-top: 3%;
+    }
+    .user-details .input-box .details{
+        font-size: 20px;
+    }
+    .contact-info {
+        margin-left: 0; /* Remove left margin for full width on smaller screens */
+        padding: 15px; /* Increase padding for better spacing */
+    }
+    .contact-info h2{
+        font-size: 40px;
+        margin-bottom: 10%;
+        margin-top: 7%;
+    }
+    .info-grid {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        gap: 10px; /* Reduce gap between stacked items */
+        margin-left: 0; /* Remove negative margin */
+        justify-items: left; /* Center content horizontally */
+        text-align: center; /* Center text within the grid item */
+        padding: 15px;
+    }
 
-    .contact-info h2 {
-        font-size: 22px; /* Adjust heading size */
-        text-align: left;
+    .contact-info .bi-pin-map-fill,
+    .contact-info .bi-telephone-fill,
+    .contact-info .bi-envelope,
+    .contact-info .bi-clock {
+        margin: 0 auto 10px auto; /* Center icon and add bottom margin */
+        display: flex; /* Make it a block element to take full width for centering */
     }
 
     .info-grid h4 {
-        font-size: 20px;
+        font-size: 24px; /* Adjust font size for readability on smaller screens */
+        align-self: flex-start;
+        justify-content: left;
     }
 
-    .info-grid p {
+    .contact-info .info-grid p {
+        text-align: left;
+        justify-self: left;
+        margin: 0;
+        padding: 0;
+        font-size: 16px; /* Adjust font size for readability on smaller screens */
+    }
+
+    .info-icon {
+        grid-row-start: auto; /* Reset grid row for stacking */
+        grid-row-end: auto; /* Reset grid row for stacking */
+        display: flex; /* Use flexbox to center the icon */
+        justify-content: left; /* Center icon horizontally */
+        justify-self: left; /* Center icon vertically */
+        width: auto; /* Allow icon to size naturally */
+    }
+    
+    .grid-container .follow-us{
+        padding: 20px;
+    }
+    .grid-container .follow-us h2{
+        font-size: 40px;
+        text-align: center;
+    }
+    .grid-container .follow-us i{
+        font-size: 20px;
+        padding: 10px 12px;
+        /* margin-right: 2%; */
+        margin-left: 5%;
+    }
+    .grid-container .follow-us p{
         font-size: 15px;
+    }
+
+    .grid-container .map{
+        padding: 25px;
+    }
+
+    .grid-container .map p{
+        font-size: 23px;
     }
 }
 
