@@ -1061,7 +1061,7 @@ html {
     .main-content {
         padding-right: 3%;
         padding-left: 3%;
-        background-size: 140%;
+        background-size:cover;
     }
     .content-wrapper h1 {
         font-size: 38px;
