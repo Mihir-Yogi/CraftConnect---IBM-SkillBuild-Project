@@ -4,6 +4,16 @@
     background-color: #fcfbf3;
     color: #3a2d1b;
 } */
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure content stays within screen width */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
 
 .logo-link {
   display: flex;
