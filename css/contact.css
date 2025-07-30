@@ -212,17 +212,36 @@ form .button input:hover {
 
 /* For screens smaller than 768px (common tablet portrait and mobile landscape) */
 @media (max-width: 768px) {
+    .main h1{
+        font-size: 40px;
+    }
+    .main p{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .contact-form h2{
+        font-size: 40px;
+        margin-top: 3%;
+    }
+    .user-details .input-box .details{
+        font-size: 20px;
+    }
     .contact-info {
         margin-left: 0; /* Remove left margin for full width on smaller screens */
         padding: 15px; /* Increase padding for better spacing */
     }
-
+    .contact-info h2{
+        font-size: 40px;
+        margin-bottom: 10%;
+        margin-top: 7%;
+    }
     .info-grid {
         grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
         gap: 10px; /* Reduce gap between stacked items */
         margin-left: 0; /* Remove negative margin */
-        justify-items: center; /* Center content horizontally */
+        justify-items: left; /* Center content horizontally */
         text-align: center; /* Center text within the grid item */
+        padding: 15px;
     }
 
     .contact-info .bi-pin-map-fill,
@@ -230,14 +249,20 @@ form .button input:hover {
     .contact-info .bi-envelope,
     .contact-info .bi-clock {
         margin: 0 auto 10px auto; /* Center icon and add bottom margin */
-        display: block; /* Make it a block element to take full width for centering */
+        display: flex; /* Make it a block element to take full width for centering */
     }
 
     .info-grid h4 {
         font-size: 24px; /* Adjust font size for readability on smaller screens */
+        align-self: flex-start;
+        justify-content: left;
     }
 
-    .info-grid p {
+    .contact-info .info-grid p {
+        text-align: left;
+        justify-self: left;
+        margin: 0;
+        padding: 0;
         font-size: 16px; /* Adjust font size for readability on smaller screens */
     }
 
@@ -245,14 +270,42 @@ form .button input:hover {
         grid-row-start: auto; /* Reset grid row for stacking */
         grid-row-end: auto; /* Reset grid row for stacking */
         display: flex; /* Use flexbox to center the icon */
-        justify-content: center; /* Center icon horizontally */
-        align-items: center; /* Center icon vertically */
+        justify-content: left; /* Center icon horizontally */
+        justify-self: left; /* Center icon vertically */
         width: auto; /* Allow icon to size naturally */
+    }
+    
+    .grid-container .follow-us{
+        padding: 20px;
+    }
+    .grid-container .follow-us h2{
+        font-size: 40px;
+        text-align: center;
+    }
+    .grid-container .follow-us i{
+        font-size: 20px;
+        padding: 10px 12px;
+        /* margin-right: 2%; */
+        margin-left: 5%;
+    }
+    .grid-container .follow-us p{
+        font-size: 15px;
+    }
+
+    .grid-container .map{
+        padding: 25px;
+    }
+
+    .grid-container .map p{
+        font-size: 23px;
     }
 }
 
 /* For screens even smaller, like typical mobile phones (e.g., < 480px) */
 @media (max-width: 480px) {
+    .contact-form h2{
+        font-size: 10px;
+    }
     .contact-info {
         padding: 10px;
     }
@@ -322,167 +375,4 @@ form .button input:hover {
 
 .map p {
     font-size: 30px;
-}
-
-/* Footer started */
-.footer-bottom p {
-    color: #9d7652;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.footer {
-    background-color: #b9a189;
-    border-top: 1px solid #e6d7c3;
-    padding: 50px;
-}
-
-.footer-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 48px;
-    /* margin-top: 2rem; */
-}
-
-.footer-craftconnect {
-    margin-bottom: 15px;
-}
-
-.craftconnect-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.craftconnect-icon {
-    color: #6b4423;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.5rem;
-    font-size: 16px;
-}
-
-.craftconnect-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #6b4423;
-}
-
-.craftconnect-description {
-    color: #9d7652;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin-bottom: 14px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    color: #9d7652;
-    text-decoration: none;
-    font-size: 1.25rem;
-    transition: color 0.2s ease;
-}
-
-.social-links a:hover {
-    color: #8b4513;
-}
-
-.footer-section h4 {
-    color: #6b4423;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    /* margin-top: 14px; */
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    color: #8a6c42;
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #8b4513;
-
-}
-
-.footer-bottom {
-    border-top: 1px solid #e6d7c3;
-    padding: 2rem 0;
-    text-align: center;
-
-    /* margin-top: 2rem; */
-}
-
-/* responsive-footer */
-@media (min-width: 768px) {
-    .footer-container {
-        padding: 0 24px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 47px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .footer-container {
-        padding: 0 15px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
-        gap: 47px;
-    }
-}
-
-/* back to Top  */
-#backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 40px;
-    right: 30px;
-    z-index: 99;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    background-color: #795d41;
-    color: white;
-    cursor: pointer;
-    padding: 12px 18px;
-    border-radius: 8px;
-    transition: opacity 0.3s;
-    /* box-shadow: ; */
-}
-
-#backToTopBtn:hover {
-    background-color: #555;
 }
