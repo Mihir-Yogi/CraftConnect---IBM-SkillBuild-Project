@@ -429,6 +429,12 @@ form .button input:hover {
 
 /* For screens smaller than 768px (common tablet portrait and mobile landscape) */
 @media (max-width: 768px) {
+    .about-section h1{
+        font-size: 45px;
+    }
+    .about-section .subtitle{
+        font-size: 20px;
+    }
     .main h1{
         font-size: 40px;
     }
@@ -520,6 +526,12 @@ form .button input:hover {
 
 /* For screens even smaller, like typical mobile phones (e.g., < 480px) */
 @media (max-width: 480px) {
+    .about-section h1{
+        font-size: 45px;
+    }
+    .about-section .subtitle{
+        font-size: 20px;
+    }
     .main h1{
         font-size: 40px;
     }
