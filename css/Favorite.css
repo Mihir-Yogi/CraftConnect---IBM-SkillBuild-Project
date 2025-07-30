@@ -70,6 +70,16 @@
 .fav-page-button:hover {
     background-color: #6f3610;
 }
+@media (max-width: 500px) {
+  .fav-page-button {
+    width: 100%; /* or 90% if you want it wider */
+    margin: 0 auto; /* center the button */
+    display: block; /* make sure it behaves like a block */
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 500px) {
@@ -87,6 +97,7 @@
 
     .fav-page-button {
         width: 50%;
+
     }
 }
 
