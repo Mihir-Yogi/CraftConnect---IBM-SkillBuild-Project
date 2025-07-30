@@ -914,6 +914,7 @@ html {
         flex: 0 0 100%; /* On screens up to 768px, each column takes full width */
         max-width: 100%;
         padding: 0 10px;
+        margin-top: 3%;
     }
     .overlay-text h1 {
         font-size: 60px;
