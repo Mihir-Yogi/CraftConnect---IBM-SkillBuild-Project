@@ -5,6 +5,10 @@
     color: #3a2d1b;
 } */
 /* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
 }
